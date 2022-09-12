@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+    CADASTRAR CLIENTE
+</mat-toolbar>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+        <mat-label>Nome completo</mat-label>
+        <input matInput maxlength="50" [(ngModel)]="cliente.nome" type="text" name="name" placeholder="Victor hugo Carvalho Alves" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Endereço</mat-label>
+            <textarea matInput maxlength="120" [(ngModel)]="cliente.endereco" placeholder="Ex. Rua Manuel Vitorino, 10 - baitinga de cima" name="endereco" formControlName="endereco"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput [(ngModel)]="cliente.cpf" minlength="11" maxlength="11" type="text" name="cpf" [(ngModel)]="cliente.cpf" placeholder="01347898573" formControlName="cpf">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Documento</mat-label>
+        <input matInput [(ngModel)]="cliente.rg" type="text" name="rg" placeholder="0929774213" formControlName="rg">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="cliente.email" maxlength="256" name="email" placeholder="victoralves.prof@gmail.com" formControlName="email">
+    </mat-form-field>
+
+    <mat-radio-group formControlName="gender" [(ngModel)]="cliente.sexo">
+        <mat-radio-button value="masculino" style="margin-right: 10px;">masculino</mat-radio-button>
+        <mat-radio-button value="feminino">feminino</mat-radio-button>
+    </mat-radio-group>
+
+    <div class="button-row">
+        <button type="button" mat-raised-button color="secundary" (click)="cancel()">
+            Cancelar
+        </button>
+        <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">
+            Salvar
+        </button>
+    </div>
+</form>

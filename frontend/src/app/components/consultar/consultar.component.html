@@ -1,0 +1,78 @@
+<mat-toolbar color="primary">
+  CONSULTAR CLIENTE
+</mat-toolbar>
+
+<mat-form-field appearance="standard">
+  <mat-label>Filtro</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Victor" #input>
+</mat-form-field>
+
+<div class="group-button">
+  <button mat-raised-button color="primary" [disabled]="selection.selected.length === 0" matTooltip="Remover cliente" matTooltipPosition="below" (click)="removeClient()" aria-label="Adicionar novo cliente">
+    Deletar
+  </button>
+  <button mat-raised-button color="primary" [disabled]="selection.selected.length === 0" matTooltip="Editar cliente" matTooltipPosition="below" (click)="editClient()" aria-label="Adicionar novo cliente">
+    Editar
+  </button>
+  <button mat-raised-button color="primary" matTooltip="Add cliente" matTooltipPosition="below" (click)="newClient()" aria-label="Adicionar novo cliente">
+    Incluir
+  </button>
+</div>
+  
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- Checkbox Column -->
+		<ng-container matColumnDef="select">
+			<mat-header-cell *matHeaderCellDef></mat-header-cell>
+			<mat-cell *matCellDef="let row">
+				<mat-checkbox (click)="$event.stopPropagation()" (change)="selectHandler(row)"
+					[checked]="selection.isSelected(row)">
+				</mat-checkbox>
+			</mat-cell>
+		</ng-container>
+    
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+        <td mat-cell *matCellDef="let row"> {{ row.nome | titlecase }} </td>
+    </ng-container>
+
+    <!-- CPF Column -->
+    <ng-container matColumnDef="cpf">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> CPF </th>
+        <td mat-cell *matCellDef="let row"> {{ row.cpf }} </td>
+    </ng-container>
+
+    <!-- last payment Column -->
+    <ng-container matColumnDef="data">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> data </th>
+      <td mat-cell *matCellDef="let row"> {{ row.aVer.at(-1).data | date: 'MM/dd/yyyy' }} </td>
+    </ng-container>
+
+    <!-- debt Column -->
+    <ng-container matColumnDef="aVer">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> aVer </th>
+      <td mat-cell *matCellDef="let row"> {{ row.aVer.at(-1).valor | currency }} </td>
+    </ng-container>
+
+    <!-- debt Column -->
+    <ng-container matColumnDef="divida">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Dívida </th>
+      <td mat-cell *matCellDef="let row"> {{ row.divida | currency }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">Não existem dados para o filtro "{{ input.value }}"</td>
+    </tr>
+  </table>
+  <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons aria-label="Select page of users"></mat-paginator>
+  <pre>
+    <h3>Cliente selecionado :</h3>
+    {{selection.selected | json}}
+  </pre>
+</div>
