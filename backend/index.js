@@ -13,7 +13,7 @@ server.get('/clients', (req, res) =>
 
 server.get('/client/:cpf', (req, res) => {
     const { cpf } = req.params;
-    const index = clientes.findIndex(element => element.cpf === cpf);
+    const index = searchClient(cpf);
 
     return res.json(clientes[index]).status(200).send('Cliente consultado com sucesso');
 });
@@ -27,7 +27,7 @@ server.post('/add-client', (req, res) => {
 server.put('/edit-client', (req, res) => {
     const { cpf } = req.body; 
     
-    clientes[clientes.findIndex(element => element.cpf === cpf)] = req.body;
+    clientes[searchClient(cpf)] = req.body;
     
     return res.json(clientes).status(200).send('Dados do cliente atualizados com sucesso');
 }); 
@@ -35,7 +35,7 @@ server.put('/edit-client', (req, res) => {
 server.delete('/client/:cpf', (req, res) => {
     const { cpf } = req.params; 
     
-    clientes.splice(clientes.findIndex(element => element.cpf === cpf), 1);
+    clientes.splice(searchClient(cpf), 1);
     
     return res.json(clientes).status(200).send('Cliente foi removido com sucesso');
 });
@@ -43,3 +43,7 @@ server.delete('/client/:cpf', (req, res) => {
 server.listen(port, () => {
     console.log(`servidor escutando em http://localhost:${port}`)
 });
+
+function searchClient(cpf) {
+    return clientes.findIndex(element => element.cpf === cpf);
+}
