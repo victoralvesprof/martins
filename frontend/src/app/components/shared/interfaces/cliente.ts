@@ -6,9 +6,9 @@ export interface Cliente {
     email: string;
     sexo: Sexo;
     items?: Array<Items>;
-    divida: number;
-    abatido: number;
-    aVer: Array<Abatimento>;
+    divida?: number;
+    abatido?: number;
+    aVer?: Array<Abatimento>;
 }
 
 export enum Sexo {

@@ -73,6 +73,7 @@ export class CadastrarComponent implements OnInit {
     if(cpf){
       this.isEditar = true;
       this.clienteService.getOnlyClient(cpf).subscribe((res: any) => {
+        console.log("RESPOSTA edicao cliente: ", res);
         this.cliente = res;
       });
     }
@@ -109,19 +110,35 @@ export class CadastrarComponent implements OnInit {
   onSubmit() {
     if(this.isEditar) {
       this.clienteService.updateClient(this.cliente).subscribe(res => {
-        console.log("RESPOSTA: ", res);
-        this._snackBar.open("Registro salvo com sucesso!", "x", {duration: 3000, panelClass: 'success'});
-        this.router.navigate(['/consultar']);
+        console.log("RESPOSTA edicao cliente: ", res);
+        this._snackBar.open("Registro editado com sucesso!", "x", {duration: 3000, panelClass: 'success'});
         this.form.reset();
+        this.router.navigate(['/consultar']);
       });
     } else {
-      this.clienteService.newClient(this.form.value as Cliente).subscribe(res => {
-        console.log("RESPOSTA: ", res);
-        this._snackBar.open("Registro salvo com sucesso!", "x", {duration: 3000, panelClass: 'success'});
+      const newClient = this.constructorNewClient();
+      this.clienteService.newClient(newClient).subscribe(res => {
+        console.log("RESPOSTA novo cliente: ", res);
+        this._snackBar.open("Registro criado com sucesso!", "x", {duration: 3000, panelClass: 'success'});
         this.router.navigate(['/consultar']);
         this.form.reset();
       });
     }
+  }
+
+  constructorNewClient(): Cliente {
+    const copy: Cliente = JSON.parse(JSON.stringify(this.cliente));
     
+    copy.nome = this.form.value.name as string;
+    copy.endereco = this.form.value.endereco as string;
+    copy.cpf = this.form.value.cpf as string;
+    copy.rg = this.form.value.rg as string;
+    copy.email = this.form.value.email as string;
+    copy.items = [];
+    copy.abatido = 0;
+    copy.aVer = new Array<any>();
+    copy.aVer.push({data: new Date(0), valor: 0});
+
+    return copy;
   }
 }

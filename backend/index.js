@@ -21,7 +21,7 @@ server.get('/client/:cpf', (req, res) => {
 server.post('/add-client', (req, res) => {
     clientes.push(req.body);
 
-    return res.status(201).send('Cliente foi cadastrado com sucesso'); 
+    return res.json(clientes).status(201).send('Cliente foi cadastrado com sucesso'); 
 });
 
 server.put('/edit-client', (req, res) => {
@@ -37,7 +37,7 @@ server.delete('/client/:cpf', (req, res) => {
     
     clientes.splice(clientes.findIndex(element => element.cpf === cpf), 1);
     
-    return res.status(200).send('Cliente foi removido com sucesso');
+    return res.json(clientes).status(200).send('Cliente foi removido com sucesso');
 });
 
 server.listen(port, () => {

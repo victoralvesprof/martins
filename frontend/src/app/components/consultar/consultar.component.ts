@@ -1,6 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, AfterViewInit, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
@@ -23,11 +24,12 @@ export class ConsultarComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private clienteService: ClienteService
+    private clienteService: ClienteService,
+    private _snackBar: MatSnackBar
   ) { }
   ngOnInit(): void {
     this.clienteService.getAllClients().subscribe((res: any) => {
-      console.log("response: ", res)
+      console.log("response getall: ", res);
       res.forEach((element: any) => {
         element.aVer.forEach((el: any) => {
           element.abatido = element.abatido + el.valor;
@@ -37,6 +39,7 @@ export class ConsultarComponent implements OnInit {
         });
         element.divida = element.divida - element.abatido;
       });
+      
       this.dataSource = new MatTableDataSource(res);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -62,10 +65,11 @@ export class ConsultarComponent implements OnInit {
 
   removeClient() {
     // console.log("teste: ", this.selection.selected);
-    this.dataSource.data = this.dataSource.data.filter((element: any) => {
-      return element.cpf !== this.selection.selected[0].cpf;
+    this.clienteService.removeClient(this.selection.selected[0].cpf).subscribe((res: any) => {
+      this.dataSource = new MatTableDataSource(res);
+      this._snackBar.open("Registro salvo com sucesso!", "x", {duration: 3000, panelClass: 'success'});
+      this.selection.clear();
     });
-    this.selection.clear();
   }
 
   selectHandler(row: Cliente) {

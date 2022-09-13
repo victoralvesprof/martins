@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from "src/environments/environment";
@@ -22,8 +22,8 @@ export class ClienteService {
     return this.http.get<Observable<any>>(this.baseUrlClient + 'clients');
   }
 
-  getOnlyClient(cpf: string) {
-    return this.http.get<Observable<any>>(this.baseUrlClient + `client/${cpf}`);
+  getOnlyClient(cpf: string): Observable<any>{
+    return this.http.get(this.baseUrlClient + `client/${cpf}`);
   }
 
   newClient(newClient: Cliente) {
