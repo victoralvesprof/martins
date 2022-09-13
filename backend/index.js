@@ -1,42 +1,45 @@
 const express = require('express'); //variavel que recebe parametros do Express
 const server = express(); //variavel armazena uma aplicação Express
-const cors = require('cors');
+const cors = require('cors'); //importa cors pra remover erro
 server.use(express.json()); //faz com que o express entenda JSON
 server.use(cors());
 const clientes = require("../frontend/src/assets/mocks/data.mock.json"); //vai armazenar os clientes
+const port = process.env.PORT || 3000;
 
 server.get('/clients', (req, res) => 
 {
-    return res.json(clientes);
+    return res.json(clientes).status(200).send('Clientes disponíveis para consulta');
 });
 
 server.get('/client/:cpf', (req, res) => {
     const { cpf } = req.params;
     const index = clientes.findIndex(element => element.cpf === cpf);
 
-    return res.json(clientes[index]);
+    return res.json(clientes[index]).status(200).send('Cliente consultado com sucesso');
 });
     
 server.post('/add-client', (req, res) => {
     clientes.push(req.body);
 
-    return res.json({status: "deu bom"}); // retorna a informação da variável clientes
+    return res.status(201).send('Cliente foi cadastrado com sucesso'); 
 });
 
 server.put('/edit-client', (req, res) => {
-    const { cpf } = req.body; // recupera o index com os dados
+    const { cpf } = req.body; 
     
     clientes[clientes.findIndex(element => element.cpf === cpf)] = req.body;
     
-    return res.json(clientes);
-}); // retorna novamente os clientes atualizados após o update
+    return res.json(clientes).status(200).send('Dados do cliente atualizados com sucesso');
+}); 
 
 server.delete('/client/:cpf', (req, res) => {
-    const { cpf } = req.params; // recupera o index com os dados
+    const { cpf } = req.params; 
     
-    clientes.splice(clientes.findIndex(element => element.cpf === cpf), 1); // percorre o vetor até o index selecionado e deleta uma posição no array
+    clientes.splice(clientes.findIndex(element => element.cpf === cpf), 1);
     
-    return res.send();
-}); // retorna os dados após exclusão
+    return res.status(200).send('Cliente foi removido com sucesso');
+});
 
-server.listen(3000);
+server.listen(port, () => {
+    console.log(`servidor escutando em http://localhost:${port}`)
+});
