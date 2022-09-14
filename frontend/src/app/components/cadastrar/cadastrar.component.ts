@@ -14,7 +14,6 @@ import { ClienteService } from '../shared/services/cliente.service';
 export class CadastrarComponent implements OnInit {
   isEditar: boolean = false;
   cliente: Cliente = {
-    _id: '0',
     nome: "",
     endereco: "",
     cpf: "",

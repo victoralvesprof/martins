@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { concatMap, tap } from 'rxjs';
 
 import { Cliente } from '../shared/interfaces/cliente';
 import { ClienteService } from '../shared/services/cliente.service';
@@ -29,8 +30,13 @@ export class ConsultarComponent implements OnInit {
   ) { }
   ngOnInit(): void {
     this.clienteService.getAllClients().subscribe((res: any) => {
-      console.log("response getall: ", res);
-      res.forEach((element: any) => {
+      this.chargeClients(res);
+    });
+  }
+
+  chargeClients(response: any) {
+      console.log("response getall: ", response);
+      response.forEach((element: any) => {
         element.aVer.forEach((el: any) => {
           element.abatido = element.abatido + el.valor;
         });
@@ -40,10 +46,9 @@ export class ConsultarComponent implements OnInit {
         element.divida = element.divida - element.abatido;
       });
       
-      this.dataSource = new MatTableDataSource(res);
+      this.dataSource = new MatTableDataSource(response);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-    });
   }
 
   applyFilter(event: Event) {
@@ -64,10 +69,14 @@ export class ConsultarComponent implements OnInit {
   }
 
   removeClient() {
-    this.clienteService.removeClient(this.selection.selected[0]._id).subscribe((res: any) => {
-      this.dataSource = new MatTableDataSource(res);
-      this._snackBar.open("Registro salvo com sucesso!", "x", {duration: 3000, panelClass: 'success'});
-      this.selection.clear();
+    this.clienteService.removeClient(this.selection.selected[0]._id!).pipe(
+      tap(() => {
+        this._snackBar.open("Registro salvo com sucesso!", "x", {duration: 3000, panelClass: 'success'});
+        this.selection.clear();
+      }),
+      concatMap(() => this.clienteService.getAllClients())
+    ).subscribe((res: any) => {
+      this.chargeClients(res);
     });
   }
 
