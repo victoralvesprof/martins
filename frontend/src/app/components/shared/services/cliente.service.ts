@@ -19,22 +19,22 @@ export class ClienteService {
     //   .append('ETag', `W/"e26-lchCs6o6uvrNdfq6rONJlBa7gw4"`)
     //   .append('Access-Control-Allow-Origin', '*')
     //   .append('Access-Control-Allow-Methods', 'POST, PUT, GET, OPTIONS')
-    return this.http.get<Observable<any>>(this.baseUrlClient + 'clients');
+    return this.http.get(this.baseUrlClient + 'clientes');
   }
 
-  getOnlyClient(cpf: string): Observable<any>{
-    return this.http.get(this.baseUrlClient + `client/${cpf}`);
+  getOnlyClient(id: string): Observable<any>{
+    return this.http.get(this.baseUrlClient + `clientes/${id}`);
   }
 
-  newClient(newClient: Cliente) {
-    return this.http.post<Observable<any>>(this.baseUrlClient + 'add-client', newClient);
+  newClient(newClient: Cliente): Observable<any> {
+    return this.http.post(this.baseUrlClient + 'clientes', newClient);
   }
 
-  updateClient(editClient: Cliente){
-    return this.http.put<Observable<any>>(this.baseUrlClient + 'edit-client', editClient);
+  updateClient(editClient: Cliente): Observable<any>{
+    return this.http.put(this.baseUrlClient + 'clientes', editClient);
   }
 
-  removeClient(cpf: string) {
-    return this.http.delete<Observable<any>>(this.baseUrlClient + `client/${cpf}`);
+  removeClient(id: string): Observable<any> {
+    return this.http.delete<Observable<any>>(this.baseUrlClient + `clientes/${id}`);
   }
 }

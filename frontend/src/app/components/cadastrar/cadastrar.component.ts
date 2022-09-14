@@ -14,6 +14,7 @@ import { ClienteService } from '../shared/services/cliente.service';
 export class CadastrarComponent implements OnInit {
   isEditar: boolean = false;
   cliente: Cliente = {
+    _id: '0',
     nome: "",
     endereco: "",
     cpf: "",
@@ -69,10 +70,10 @@ export class CadastrarComponent implements OnInit {
     private clienteService: ClienteService) { }
 
   ngOnInit(): void {
-    const cpf = this.activatedRoute.snapshot.paramMap.get("cpf");
-    if(cpf){
+    const id = this.activatedRoute.snapshot.paramMap.get("id");
+    if(id){
       this.isEditar = true;
-      this.clienteService.getOnlyClient(cpf).subscribe((res: any) => {
+      this.clienteService.getOnlyClient(id).subscribe((res: any) => {
         console.log("RESPOSTA edicao cliente: ", res);
         this.cliente = res;
       });

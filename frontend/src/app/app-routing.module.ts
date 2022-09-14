@@ -13,7 +13,7 @@ const routes: Routes = [
     component: ConsultarComponent
   },
   {
-    path: 'editar/:cpf',
+    path: 'editar/:id',
     component: CadastrarComponent
   },
   { 

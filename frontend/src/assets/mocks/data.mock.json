@@ -8,25 +8,25 @@
         "sexo": "masculino",
         "items": [
             {
-                "descrição": "shampoo clear man",
+                "descricao": "shampoo clear man",
                 "quantidade": 1,
                 "data": "09/09/2021",
                 "valor": 35.50
             },
             {
-                "descrição": "fralda",
+                "descricao": "fralda",
                 "quantidade": 10,
                 "data": "09/06/2021",
                 "valor": 8
             },
             {
-                "descrição": "Anador",
+                "descricao": "Anador",
                 "quantidade": 1,
                 "data": "09/09/2022",
                 "valor": 4.50
             },
             {
-                "descrição": "epocler",
+                "descricao": "epocler",
                 "quantidade": 6,
                 "data": "09/09/2019",
                 "valor": 26.92
@@ -54,25 +54,25 @@
         "sexo": "feminino",
         "items": [
             {
-                "descrição": "shampoo clear woman",
+                "descricao": "shampoo clear woman",
                 "quantidade": 1,
                 "data": "09/09/2021",
                 "valor": 36.50
             },
             {
-                "descrição": "fralda",
+                "descricao": "fralda",
                 "quantidade": 10,
                 "data": "09/06/2021",
                 "valor": 8.00
             },
             {
-                "descrição": "anitta",
+                "descricao": "anitta",
                 "quantidade": 1,
                 "data": "09/09/2022",
                 "valor": 9.50
             },
             {
-                "descrição": "engov",
+                "descricao": "engov",
                 "quantidade": 6,
                 "data": "09/09/2019",
                 "valor": 20.92
@@ -100,25 +100,25 @@
         "sexo": "masculino",
         "items": [
             {
-                "descrição": "sabonete protex",
+                "descricao": "sabonete protex",
                 "quantidade": 5,
                 "data": "09/09/2021",
                 "valor": 35.50
             },
             {
-                "descrição": "Tandrilax",
+                "descricao": "Tandrilax",
                 "quantidade": 1,
                 "data": "09/06/2021",
                 "valor": 6
             },
             {
-                "descrição": "Protetor Solar",
+                "descricao": "Protetor Solar",
                 "quantidade": 1,
                 "data": "09/09/2022",
                 "valor": 71.20
             },
             {
-                "descrição": "epocler",
+                "descricao": "epocler",
                 "quantidade": 6,
                 "data": "09/09/2019",
                 "valor": 26.92
@@ -146,25 +146,25 @@
         "sexo": "masculino",
         "items": [
             {
-                "descrição": "shampoo clear man",
+                "descricao": "shampoo clear man",
                 "quantidade": 1,
                 "data": "09/09/2021",
                 "valor": 35.50
             },
             {
-                "descrição": "fralda",
+                "descricao": "fralda",
                 "quantidade": 10,
                 "data": "09/06/2021",
                 "valor": 8
             },
             {
-                "descrição": "Anador",
+                "descricao": "Anador",
                 "quantidade": 1,
                 "data": "09/09/2022",
                 "valor": 4.50
             },
             {
-                "descrição": "epocler",
+                "descricao": "epocler",
                 "quantidade": 6,
                 "data": "09/09/2019",
                 "valor": 26.92
@@ -192,25 +192,25 @@
         "sexo": "feminino",
         "items": [
             {
-                "descrição": "shampoo clear woman",
+                "descricao": "shampoo clear woman",
                 "quantidade": 1,
                 "data": "09/09/2021",
                 "valor": 36.50
             },
             {
-                "descrição": "fralda",
+                "descricao": "fralda",
                 "quantidade": 10,
                 "data": "09/06/2021",
                 "valor": 8.00
             },
             {
-                "descrição": "anitta",
+                "descricao": "anitta",
                 "quantidade": 1,
                 "data": "09/09/2022",
                 "valor": 9.50
             },
             {
-                "descrição": "engov",
+                "descricao": "engov",
                 "quantidade": 6,
                 "data": "09/09/2019",
                 "valor": 20.92
@@ -238,25 +238,25 @@
         "sexo": "masculino",
         "items": [
             {
-                "descrição": "sabonete protex",
+                "descricao": "sabonete protex",
                 "quantidade": 5,
                 "data": "09/09/2021",
                 "valor": 35.50
             },
             {
-                "descrição": "Tandrilax",
+                "descricao": "Tandrilax",
                 "quantidade": 1,
                 "data": "09/06/2021",
                 "valor": 6
             },
             {
-                "descrição": "Protetor Solar",
+                "descricao": "Protetor Solar",
                 "quantidade": 1,
                 "data": "09/09/2022",
                 "valor": 71.20
             },
             {
-                "descrição": "epocler",
+                "descricao": "epocler",
                 "quantidade": 6,
                 "data": "09/09/2019",
                 "valor": 26.92

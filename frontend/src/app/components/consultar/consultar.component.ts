@@ -60,12 +60,11 @@ export class ConsultarComponent implements OnInit {
   }
 
   editClient() {
-    this.router.navigate([`/editar/${this.selection.selected[0].cpf}`]);
+    this.router.navigate([`/editar/${this.selection.selected[0]._id}`]);
   }
 
   removeClient() {
-    // console.log("teste: ", this.selection.selected);
-    this.clienteService.removeClient(this.selection.selected[0].cpf).subscribe((res: any) => {
+    this.clienteService.removeClient(this.selection.selected[0]._id).subscribe((res: any) => {
       this.dataSource = new MatTableDataSource(res);
       this._snackBar.open("Registro salvo com sucesso!", "x", {duration: 3000, panelClass: 'success'});
       this.selection.clear();

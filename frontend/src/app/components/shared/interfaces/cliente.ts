@@ -1,4 +1,5 @@
 export interface Cliente {
+    _id: string;
     nome: string;
     endereco: string;
     cpf: string;
@@ -17,7 +18,7 @@ export enum Sexo {
 }
 
 export interface Items {
-    descrição: string;
+    descricao: string;
     quantidade: number;
     data: Date;
     valor: number;
