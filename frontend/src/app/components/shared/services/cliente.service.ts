@@ -31,7 +31,7 @@ export class ClienteService {
   }
 
   updateClient(editClient: Cliente): Observable<any>{
-    return this.http.put(this.baseUrlClient + 'clientes', editClient);
+    return this.http.put(this.baseUrlClient + `clientes/${editClient._id}`, editClient);
   }
 
   removeClient(id: string): Observable<any> {

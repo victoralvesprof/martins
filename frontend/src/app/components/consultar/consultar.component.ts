@@ -65,6 +65,7 @@ export class ConsultarComponent implements OnInit {
   }
 
   editClient() {
+    console.log("ID para edição: ", this.selection.selected[0]._id)
     this.router.navigate([`/editar/${this.selection.selected[0]._id}`]);
   }
 
