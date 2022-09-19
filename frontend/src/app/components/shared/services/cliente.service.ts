@@ -8,7 +8,7 @@ import { Cliente } from '../interfaces/cliente';
   providedIn: 'root'
 })
 export class ClienteService {
-  baseUrlClient: string = environment.clientesApi;
+  baseUrlClient: string = environment.bffClientes;
 
   constructor(public http: HttpClient) { }
 
@@ -19,22 +19,22 @@ export class ClienteService {
     //   .append('ETag', `W/"e26-lchCs6o6uvrNdfq6rONJlBa7gw4"`)
     //   .append('Access-Control-Allow-Origin', '*')
     //   .append('Access-Control-Allow-Methods', 'POST, PUT, GET, OPTIONS')
-    return this.http.get(this.baseUrlClient + 'clientes');
+    return this.http.get(this.baseUrlClient + '/clientes');
   }
 
   getOnlyClient(id: string): Observable<any>{
-    return this.http.get(this.baseUrlClient + `clientes/${id}`);
+    return this.http.get(this.baseUrlClient + `/clientes/${id}`);
   }
 
   newClient(newClient: Cliente): Observable<any> {
-    return this.http.post(this.baseUrlClient + 'clientes', newClient);
+    return this.http.post(this.baseUrlClient + '/clientes', newClient);
   }
 
   updateClient(editClient: Cliente): Observable<any>{
-    return this.http.put(this.baseUrlClient + `clientes/${editClient._id}`, editClient);
+    return this.http.put(this.baseUrlClient + `/clientes/${editClient._id}`, editClient);
   }
 
   removeClient(id: string): Observable<any> {
-    return this.http.delete<Observable<any>>(this.baseUrlClient + `clientes/${id}`);
+    return this.http.delete<Observable<any>>(this.baseUrlClient + `/clientes/${id}`);
   }
 }

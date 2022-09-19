@@ -8,9 +8,12 @@ const routes = (app) => {
   })
   app.use(
     express.json(),
-    cors(),
+    cors({
+      origin: 'http://localhost:5000',
+      optionsSuccessStatus: 200,
+    }),
     clientes
-  )
+  );
 }
 
 export default routes
