@@ -2,8 +2,7 @@ import clientes from "../models/Cliente.js";
 import api from "../config/local.js";
 import axios from "axios";
 
-async function makeRequest() {
-
+async function metodo3() {
   const config = {
       method: 'get',
       url: 'http://localhost:3000/clientes',
@@ -16,12 +15,29 @@ async function makeRequest() {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, PUT, GET, OPTIONS'
       }
-      
   };
-
   let res = await axios(config);
-
   console.log("header:", res.data);
+}
+
+function metodo2() {
+  api.get('/clientes')
+    .then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+}
+
+function metodo1() {
+  axios.get("http://localhost:3000/clientes", async (req, res) )
+    .then((response) => doSomething(response.data))
+    .catch((err) => {
+      console.error("ops! ocorreu um erro" + err);
+    });
 }
 
 class ClienteController {
@@ -30,25 +46,13 @@ class ClienteController {
     console.log("chegou aq");
 
     //METODO 1
-  //   // axios.get("http://localhost:3000/clientes", async (req, res) )
-  //   //   .then((response) => doSomething(response.data))
-  //   //   .catch((err) => {
-  //   //     console.error("ops! ocorreu um erro" + err);
-  //   //  });
+    // metodo1();
 
     //METODO 2
-  // api.get('/clientes')
-  //   .then(function (response) {
-    //     // handle success
-    //     console.log(response);
-    //   })
-    //   .catch(function (error) {
-    //     // handle error
-    //     console.log(error);
-    //   })
+    // metodo2();
       
     //METODO 3
-    makeRequest();
+    metodo3();
   }
 
   static listarClientePorId = () => {
