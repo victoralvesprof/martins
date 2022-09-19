@@ -1,11 +1,12 @@
 import clientes from "../models/Cliente.js";
 import api from "../config/local.js";
+import axios from "axios";
 
 async function makeRequest() {
 
   const config = {
       method: 'get',
-      url: '/clientes',
+      url: 'http://localhost:3000/clientes',
       headers: {
         'User-Agent': 'Axios - console app',
         'Content-Type': 'application/json',
@@ -20,20 +21,24 @@ async function makeRequest() {
 
   let res = await axios(config);
 
-  console.log("header:", res);
+  console.log("header:", res.data);
 }
 
 class ClienteController {
 
   static listarClientes = () => {
-  //   // api.get("/clientes", async (req, res) )
+    console.log("chegou aq");
+
+    //METODO 1
+  //   // axios.get("http://localhost:3000/clientes", async (req, res) )
   //   //   .then((response) => doSomething(response.data))
   //   //   .catch((err) => {
   //   //     console.error("ops! ocorreu um erro" + err);
   //   //  });
-  makeRequest();
-    // api.get('/clientes')
-    //   .then(function (response) {
+
+    //METODO 2
+  // api.get('/clientes')
+  //   .then(function (response) {
     //     // handle success
     //     console.log(response);
     //   })
@@ -41,7 +46,9 @@ class ClienteController {
     //     // handle error
     //     console.log(error);
     //   })
-    
+      
+    //METODO 3
+    makeRequest();
   }
 
   static listarClientePorId = () => {
