@@ -4,7 +4,6 @@ class ClienteController {
 
   static listarClientes = (req, res) => {
     clientes.find((err, clientes) => {
-      console.log.bind("passou no backend");
         res.status(200).json(clientes)
   })
   }
