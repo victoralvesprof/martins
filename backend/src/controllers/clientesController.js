@@ -1,60 +1,26 @@
 import clientes from "../models/Cliente.js";
+import ClienteDao from "../dao/clienteDao.js";
 
 class ClienteController {
 
   static listarClientes = (req, res) => {
-    clientes.find((err, clientes) => {
-        res.status(200).json(clientes)
-  })
+    ClienteDao.listarTodosClientes(req, res);
   }
 
   static listarClientePorId = (req, res) => {
-    const id = req.params.id;
-
-    clientes.findById(id)
-      .exec((err, clientes) => {
-      if(err) {
-        res.status(400).send({message: `${err.message} - ID do Cliente não localizado.`})
-      } else {
-        res.status(200).send(clientes);
-      }
-    })
+    ClienteDao.listarUnicoCliente(req, res);
   }
 
   static cadastrarCliente = (req, res) => {
-    let cliente = new clientes(req.body);
-
-    cliente.save((err) => {
-      if(err) {
-        res.status(500).send({message: `${err.message} - Falha ao cadastrar cliente.`})
-      } else {
-        res.status(201).send(cliente.toJSON())
-      }
-    })
+    ClienteDao.addCliente(req, res);
   }
 
   static atualizarCliente = (req, res) => {
-    const id = req.params.id;
-
-    clientes.findByIdAndUpdate(id, {$set: req.body}, (err) => {
-      if(!err) {
-        res.status(200).send({message: 'Cliente atualizado com sucesso'})
-      } else {
-        res.status(500).send({message: err.message})
-      }
-    })
+    ClienteDao.atualizarCliente(req, res);
   }
 
   static excluirCliente = (req, res) => {
-    const id = req.params.id;
-
-    clientes.findByIdAndDelete(id, (err) => {
-      if(!err){
-        res.status(200).send({message: 'Cliente removido com sucesso'})
-      } else {
-        res.status(500).send({message: err.message})
-      }
-    })
+    ClienteDao.deletarCliente(req, res);
   }
 }
 

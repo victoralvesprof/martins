@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrarModule } from './components/cadastrar/cadastrar.module';
 import { ConsultarComponent } from './components/consultar/consultar.component';
 import { ConsultarModule } from './components/consultar/consultar.module';
+import { FiadoModule } from './components/fiado/fiado.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ConsultarModule } from './components/consultar/consultar.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     CadastrarModule,
-    ConsultarModule
+    ConsultarModule,
+    FiadoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

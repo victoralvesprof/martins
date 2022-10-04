@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { ConsultarComponent } from './components/consultar/consultar.component';
+import { FiadoComponent } from './components/fiado/fiado.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'editar/:id',
     component: CadastrarComponent
+  },
+  {
+    path: 'fiado/:id',
+    component: FiadoComponent
   },
   { 
     path: '**', 
