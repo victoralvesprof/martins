@@ -69,6 +69,10 @@ export class ConsultarComponent implements OnInit {
     this.router.navigate([`/editar/${this.selection.selected[0]._id}`]);
   }
 
+  fiado() {
+    this.router.navigate([`/fiado/${this.selection.selected[0]._id}`]);
+  }
+
   removeClient() {
     this.clienteService.removeClient(this.selection.selected[0]._id!).pipe(
       tap(() => {

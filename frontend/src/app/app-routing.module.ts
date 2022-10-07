@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdicionarFiadoComponent } from './components/adicionar-fiado/adicionar-fiado.component';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { ConsultarComponent } from './components/consultar/consultar.component';
 import { FiadoComponent } from './components/fiado/fiado.component';
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'fiado/:id',
     component: FiadoComponent
+  },
+  {
+    path: 'adicionar-fiado/:id',
+    component: AdicionarFiadoComponent
   },
   { 
     path: '**', 

@@ -22,6 +22,7 @@ export interface Items {
     quantidade: number;
     data: Date;
     valor: number;
+    codigo?: string;
 }
 
 export interface Abatimento {

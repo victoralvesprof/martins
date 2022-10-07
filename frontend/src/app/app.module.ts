@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { CadastrarModule } from './components/cadastrar/cadastrar.module';
-import { ConsultarComponent } from './components/consultar/consultar.component';
 import { ConsultarModule } from './components/consultar/consultar.module';
 import { FiadoModule } from './components/fiado/fiado.module';
+import { AdicionarFiadoComponent } from './components/adicionar-fiado/adicionar-fiado.component';
+import { AdicionarFiadoModule } from './components/adicionar-fiado/adicionar-fiado.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FiadoModule } from './components/fiado/fiado.module';
     BrowserAnimationsModule,
     CadastrarModule,
     ConsultarModule,
-    FiadoModule
+    FiadoModule,
+    AdicionarFiadoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
