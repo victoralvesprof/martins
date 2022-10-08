@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Cliente, Items } from '../shared/interfaces/cliente';
+import { Abatimento, Cliente, Items } from '../shared/interfaces/cliente';
 import { ClienteService } from '../shared/services/cliente.service';
 
 @Component({
@@ -13,7 +13,11 @@ import { ClienteService } from '../shared/services/cliente.service';
 })
 export class FiadoComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
-  displayedColumns: string[] = ['descricao', 'quantidade', 'data', 'valor'];
+  dataSourceAbatimento!: MatTableDataSource<any>;
+
+  displayedColumnsDividas: string[] = ['descricao', 'quantidade', 'data', 'valor'];
+  displayedColumnsAbatimentos: string[] = ['data', 'valor'];
+
   id: string = '';
   cliente: Cliente = {
     nome: "",
@@ -31,6 +35,7 @@ export class FiadoComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
   
   clienteItems: Array<Items> = [];
+  clienteAbatimentos: Array<Abatimento> = [];
 
   constructor(
     private router: Router,
@@ -44,9 +49,11 @@ export class FiadoComponent implements OnInit {
         console.log("fiado cliente: ", res);
         this.cliente = res;
         this.clienteItems = res.items!;
+        this.clienteAbatimentos = res.aVer!;
 
         this.dataSource = new MatTableDataSource(this.clienteItems);
-        console.log("dataSource: ", this.dataSource);
+        this.dataSourceAbatimento = new MatTableDataSource(this.clienteAbatimentos);
+
         this.dataSource.sort = this.sort;
       });
     }
@@ -67,5 +74,9 @@ export class FiadoComponent implements OnInit {
 
   getTotalCost() {
     return this.clienteItems.map(t => t.valor * t.quantidade).reduce((acc, value) => acc + value, 0);
+  }
+
+  pagarFiado(){
+
   }
 }

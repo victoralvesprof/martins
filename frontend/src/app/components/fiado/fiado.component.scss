@@ -1,13 +1,14 @@
 table {
-    width: 100%;
     background-color: #f8f8f8;
 }
-  
-.mat-form-field {
-    font-size: 14px;
-    width: 100%;
+
+form {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
 }
-  
+
 td, th {
     width: 25%;
 }
@@ -20,18 +21,29 @@ mat-cell:last-of-type, mat-header-cell:last-of-type, mat-footer-cell:last-of-typ
     display: flex;
     justify-content: flex-end;
     padding-bottom: 1%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .group-button button {
     margin-left: 0.5%;
 }
 
-.table--container {
-    height: 40vh;
+.table-container {
+    height: 35vh;
     overflow: auto;
+    width: 90%;
+    margin: 0 auto;
 }
-  
-  
+
+.table-container-abatimento {
+    margin-top: 2% !important;
+    height: 25vh;
+    overflow: auto;
+    width: 30%;
+    margin: 0 auto;
+}
+
 tr.mat-footer-row {
     font-weight: bold;
 }
