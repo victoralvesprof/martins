@@ -13,13 +13,14 @@ const clienteSchema = new mongoose.Schema([
             descricao: {type: String, required: true},
             quantidade: {type: Number, required: true},
             data: {type: Date, required: true},
-            valor: {type: Number, required: true}
+            valor: {type: Number, required: true},
+            pago: {type: Boolean},
         }
     ]},
     divida: {type: Number},
     aVer: [
         {
-            data: {type: Date, required: true},
+            data: {type: Date},
             valor: {type: Number, required: true}
         }
     ],

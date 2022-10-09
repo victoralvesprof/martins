@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    PAGAR FIADO
+  </mat-toolbar>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Valor a ser abatido</mat-label>
+    <input
+        #abatimento
+        matInput 
+        [(ngModel)]="data"
+        currencyMask
+        [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+    >
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Pagar</button>
+</div>

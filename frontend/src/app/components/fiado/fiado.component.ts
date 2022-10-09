@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -14,6 +15,7 @@ import { ClienteService } from '../shared/services/cliente.service';
 export class FiadoComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   dataSourceAbatimento!: MatTableDataSource<any>;
+  abater!: number;
 
   displayedColumnsDividas: string[] = ['descricao', 'quantidade', 'data', 'valor'];
   displayedColumnsAbatimentos: string[] = ['data', 'valor'];
@@ -33,14 +35,12 @@ export class FiadoComponent implements OnInit {
   };
 
   @ViewChild(MatSort) sort!: MatSort;
-  
-  clienteItems: Array<Items> = [];
-  clienteAbatimentos: Array<Abatimento> = [];
 
   constructor(
     private router: Router,
     private activatedRoute : ActivatedRoute,
-    private clienteService: ClienteService) { }
+    private clienteService: ClienteService,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.paramMap.get("id")!;
@@ -48,11 +48,9 @@ export class FiadoComponent implements OnInit {
       this.clienteService.getOnlyClient(this.id).subscribe((res: any) => {
         console.log("fiado cliente: ", res);
         this.cliente = res;
-        this.clienteItems = res.items!;
-        this.clienteAbatimentos = res.aVer!;
 
-        this.dataSource = new MatTableDataSource(this.clienteItems);
-        this.dataSourceAbatimento = new MatTableDataSource(this.clienteAbatimentos);
+        this.dataSource = new MatTableDataSource(this.cliente.items);
+        this.dataSourceAbatimento = new MatTableDataSource(this.cliente.aVer);
 
         this.dataSource.sort = this.sort;
       });
@@ -72,11 +70,55 @@ export class FiadoComponent implements OnInit {
     this.router.navigate([`/consultar`]);
   }
 
-  getTotalCost() {
-    return this.clienteItems.map(t => t.valor * t.quantidade).reduce((acc, value) => acc + value, 0);
+  getTotalCost(lista: string): number {
+    if(lista === "Abatimento") return this.cliente.aVer!.map(t => t.valor).reduce((acc, value) => acc + value, 0);
+    else {
+      return this.cliente.items!.map(t => t.valor).reduce((acc, value) => acc + value, 0)
+    };
   }
 
   pagarFiado(){
+    const dialogRef = this.dialog.open(PagarFiadoDialog, {
+      width: '250px',
+      data: this.abater
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      this.abater = result;
+      console.log("abater: ", this.abater);
+
+      this.cliente.aVer?.push({valor: this.abater})
+      this.cliente.abatido = this.getTotalCost('abatimento');
+
+      this.cliente.items!.map((el: Items) => {
+        if(this.cliente.abatido! > 0 && !el.pago) {
+          const item = el.valor * el.quantidade;
+          if(item <= this.cliente.abatido!) {
+            el.pago = true;
+            this.cliente.abatido = this.cliente.abatido! - item;
+          } else{
+            return;
+          }
+        } else {
+          return;
+        }
+      })
+    });
+  }
+}
+
+@Component({
+  selector: 'app-pagar-fiado',
+  templateUrl: 'pagar-fiado.dialog.html',
+})
+export class PagarFiadoDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<PagarFiadoDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }

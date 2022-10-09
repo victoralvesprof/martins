@@ -4,18 +4,21 @@ import { FiadoService } from './fiado.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/modules/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FiadoComponent } from './fiado.component';
+import { FiadoComponent, PagarFiadoDialog } from './fiado.component';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 @NgModule({
   declarations: [
-    FiadoComponent
+    FiadoComponent,
+    PagarFiadoDialog
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    CurrencyMaskModule
   ],
   providers: [
     FiadoService,

@@ -80,8 +80,9 @@ export class AdicionarFiadoComponent implements OnInit {
     const newItem: Items = {
       descricao: this.selectedProduct.nome,
       quantidade: this.quantity!,
-      data: new Date(),
-      valor: this.selectedProduct.preco
+      data: new Date(Date.now()),
+      valor: this.selectedProduct.preco,
+      pago: false
     }
     this.clienteService.getOnlyClient(this.id)
       .pipe(

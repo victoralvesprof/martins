@@ -23,9 +23,10 @@ export interface Items {
     data: Date;
     valor: number;
     codigo?: string;
+    pago: boolean;
 }
 
 export interface Abatimento {
-    data: Date;
+    data?: Date;
     valor: number;
 }
