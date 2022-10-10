@@ -35,17 +35,6 @@ export class ConsultarComponent implements OnInit {
   }
 
   chargeClients(response: any) {
-      console.log("response getall: ", response);
-      response.forEach((element: any) => {
-        element.aVer.forEach((el: any) => {
-          element.abatido = element.abatido + el.valor;
-        });
-        element.items.forEach((el: any) => {
-          element.divida = element.divida + el.valor * el.quantidade;
-        });
-        element.divida = element.divida - element.abatido;
-      });
-      
       this.dataSource = new MatTableDataSource(response);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;

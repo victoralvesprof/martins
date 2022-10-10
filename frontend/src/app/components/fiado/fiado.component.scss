@@ -1,10 +1,11 @@
 table {
     background-color: #f8f8f8;
+    width: 100%;
 }
 
 form {
     display: flex;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     justify-content: center;
 }
@@ -32,7 +33,7 @@ mat-cell:last-of-type, mat-header-cell:last-of-type, mat-footer-cell:last-of-typ
 .table-container {
     height: 35vh;
     overflow: auto;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -50,4 +51,13 @@ tr.mat-footer-row {
 
 .mat-table-sticky {
     border-top: 1px solid #e0e0e0;
+}
+
+.pago {
+    text-decoration: line-through;
+    color: red;
+}
+
+.centralizar {
+    text-align: center;
 }

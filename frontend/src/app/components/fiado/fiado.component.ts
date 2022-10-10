@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
+import { tap } from 'rxjs';
 import { Abatimento, Cliente, Items } from '../shared/interfaces/cliente';
 import { ClienteService } from '../shared/services/cliente.service';
 
@@ -16,8 +17,9 @@ export class FiadoComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   dataSourceAbatimento!: MatTableDataSource<any>;
   abater!: number;
+  contadorFiado: number = 0;
 
-  displayedColumnsDividas: string[] = ['descricao', 'quantidade', 'data', 'valor'];
+  displayedColumnsDividas: string[] = ['descricao', 'quantidade', 'data', 'valor', 'parcial'];
   displayedColumnsAbatimentos: string[] = ['data', 'valor'];
 
   id: string = '';
@@ -31,7 +33,7 @@ export class FiadoComponent implements OnInit {
     items: [],
     divida: 0,
     aVer: [],
-    abatido: 0
+    sobra: 0
   };
 
   @ViewChild(MatSort) sort!: MatSort;
@@ -45,39 +47,40 @@ export class FiadoComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.paramMap.get("id")!;
     if(this.id){
-      this.clienteService.getOnlyClient(this.id).subscribe((res: any) => {
-        console.log("fiado cliente: ", res);
-        this.cliente = res;
-
-        this.dataSource = new MatTableDataSource(this.cliente.items);
-        this.dataSourceAbatimento = new MatTableDataSource(this.cliente.aVer);
-
-        this.dataSource.sort = this.sort;
-      });
+      this.chargeClient();
+      
     }
+  }
+
+  chargeClient(){
+    this.clienteService.getOnlyClient(this.id).subscribe((res: any) => {
+      console.log("fiado cliente: ", res);
+      this.cliente = res;
+
+      this.dataSource = new MatTableDataSource(this.cliente.items);
+      this.dataSourceAbatimento = new MatTableDataSource(this.cliente.aVer!);
+
+      this.dataSource.sort = this.sort;
+    });
   }
 
   addData() {
     this.router.navigate([`/adicionar-fiado/${this.id}`]);
   }
 
-  removeData() {
-    // this.dataSource.pop();
-    // this.table.renderRows();
-  }
-
   back() {
     this.router.navigate([`/consultar`]);
   }
 
-  getTotalCost(lista: string): number {
+  getTotalCost(lista: string = "Abatimento"): number {
     if(lista === "Abatimento") return this.cliente.aVer!.map(t => t.valor).reduce((acc, value) => acc + value, 0);
     else {
-      return this.cliente.items!.map(t => t.valor).reduce((acc, value) => acc + value, 0)
+      return this.cliente.items!.filter(el => !el.pago).map(t => t.valor * t.quantidade).reduce((acc, value) => acc + value, 0)
     };
   }
 
   pagarFiado(){
+    this.abater = this.cliente.divida!;
     const dialogRef = this.dialog.open(PagarFiadoDialog, {
       width: '250px',
       data: this.abater
@@ -87,22 +90,36 @@ export class FiadoComponent implements OnInit {
       this.abater = result;
       console.log("abater: ", this.abater);
 
-      this.cliente.aVer?.push({valor: this.abater})
-      this.cliente.abatido = this.getTotalCost('abatimento');
-
-      this.cliente.items!.map((el: Items) => {
-        if(this.cliente.abatido! > 0 && !el.pago) {
-          const item = el.valor * el.quantidade;
-          if(item <= this.cliente.abatido!) {
-            el.pago = true;
-            this.cliente.abatido = this.cliente.abatido! - item;
-          } else{
+      if(this.abater) {
+        this.cliente.sobra! += this.abater;
+        this.cliente.aVer?.push({valor: this.abater} as Abatimento)
+        this.cliente.divida! -= this.abater;
+  
+        this.cliente.items!.map((el: Items) => {
+          if(!el.pago) {
+            const item = el.valor * el.quantidade;
+            if(item <= this.cliente.sobra!) {
+              el.pago = true;
+              this.cliente.sobra! -= item;
+              this.contadorFiado++;
+            } 
+          } else {
+            this.contadorFiado++;
             return;
           }
-        } else {
-          return;
+        });
+
+        if(this.contadorFiado === this.cliente.items?.length) {
+          this.cliente.items = [];
+          this.cliente.aVer = [];
         }
-      })
+  
+        this.clienteService.updateClient(this.cliente).pipe(
+          tap(() => this.chargeClient())
+        ).subscribe(res => {
+          console.log("fiado editado: ", this.cliente);
+        })
+      }
     });
   }
 }
@@ -119,6 +136,7 @@ export class PagarFiadoDialog {
   ) {}
 
   onNoClick(): void {
+    this.data = '';
     this.dialogRef.close();
   }
 }

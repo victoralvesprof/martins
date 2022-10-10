@@ -50,13 +50,13 @@
     <!-- last payment Column -->
     <ng-container matColumnDef="data">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> data </th>
-      <td mat-cell *matCellDef="let row"> {{ row.aVer.at(-1).data | date: 'MM/dd/yyyy' }} </td>
+      <td mat-cell *matCellDef="let row"> {{ row.aVer.length === 0 ? '' : (row.aVer.at(-1).data | date: 'MM/dd/yyyy') }} </td>
     </ng-container>
 
     <!-- debt Column -->
     <ng-container matColumnDef="aVer">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> aVer </th>
-      <td mat-cell *matCellDef="let row"> {{ row.aVer.at(-1).valor | currency }} </td>
+      <td mat-cell *matCellDef="let row"> {{ row.aVer.length === 0 ? 0 : row.aVer.at(-1).valor | currency }} </td>
     </ng-container>
 
     <!-- debt Column -->

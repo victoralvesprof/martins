@@ -22,8 +22,7 @@ export class CadastrarComponent implements OnInit {
     sexo: 0,
     items: [],
     divida: 0,
-    aVer: [],
-    abatido: 0
+    aVer: []
   };
 
   form = this.fb.group({
@@ -135,7 +134,6 @@ export class CadastrarComponent implements OnInit {
     copy.rg = this.form.value.rg as string;
     copy.email = this.form.value.email as string;
     copy.items = [];
-    copy.abatido = 0;
     copy.aVer = new Array<any>();
     copy.aVer.push({data: new Date(0), valor: 0});
 

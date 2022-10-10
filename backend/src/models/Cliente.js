@@ -20,11 +20,11 @@ const clienteSchema = new mongoose.Schema([
     divida: {type: Number},
     aVer: [
         {
-            data: {type: Date},
+            data: {type: Date, default: Date.now},
             valor: {type: Number, required: true}
         }
     ],
-    abatido: {type: Number}
+    sobra: {type: Number}
   }]
 );
 

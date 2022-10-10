@@ -42,8 +42,7 @@
                 "valor": 27.00,
                 "data": "01/01/2021"
             }
-        ],
-        "abatido": 47.42
+        ]
     },
     {
         "nome": "Priscila de Almeida Nóbrega",
@@ -88,8 +87,7 @@
                 "data": "10/09/2021",
                 "valor": 28.00
             }
-        ],
-        "abatido": 48.42
+        ]
     },
     {
         "nome": "Matheus Alves",
@@ -134,8 +132,7 @@
                 "data": "02/12/2021",
                 "valor": 29.01
             }
-        ],
-        "abatido": 49.42
+        ]
     },
     {
         "nome": "victor Hugo Carvalho Alves",
@@ -180,8 +177,7 @@
                 "valor": 27.00,
                 "data": "11/03/2021"
             }
-        ],
-        "abatido": 47.42
+        ]
     },
     {
         "nome": "Priscila de Almeida Nóbrega",
@@ -226,8 +222,7 @@
                 "data": "05/09/2021",
                 "valor": 28.00
             }
-        ],
-        "abatido": 48.42
+        ]
     },
     {
         "nome": "Matheus Alves",
@@ -272,7 +267,6 @@
                 "valor": 29.00,
                 "data": "10/06/2021"
             }
-        ],
-        "abatido": 49.42
+        ]
     }
 ]

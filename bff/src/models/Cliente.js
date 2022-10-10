@@ -20,8 +20,7 @@ const clientes = [
             data: {type: Date, required: true},
             valor: {type: Number, required: true}
         }
-    ],
-    abatido: {type: Number}
+    ]
   }
 ];
 

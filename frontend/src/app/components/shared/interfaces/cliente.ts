@@ -8,8 +8,8 @@ export interface Cliente {
     sexo: Sexo;
     items?: Array<Items>;
     divida?: number;
-    abatido?: number;
     aVer?: Array<Abatimento>;
+    sobra?: number;
 }
 
 export enum Sexo {
