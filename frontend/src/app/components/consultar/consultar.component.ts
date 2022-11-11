@@ -19,6 +19,7 @@ export class ConsultarComponent implements OnInit {
   dataSource!: MatTableDataSource<Cliente[]>;
   displayedColumns: string[] = ['select', 'nome', 'cpf', 'data', 'aVer', 'divida'];
   selection = new SelectionModel<Cliente>(true, []);
+  filter: string = '';
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -28,6 +29,7 @@ export class ConsultarComponent implements OnInit {
     private clienteService: ClienteService,
     private _snackBar: MatSnackBar
   ) { }
+  
   ngOnInit(): void {
     this.clienteService.getAllClients().subscribe((res: any) => {
       this.chargeClients(res);
@@ -40,9 +42,8 @@ export class ConsultarComponent implements OnInit {
       this.dataSource.sort = this.sort;
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  applyFilter() {
+    this.dataSource.filter = this.filter.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();

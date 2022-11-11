@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { concatMap, first, last, tap } from 'rxjs';
+import { concatMap, last, tap } from 'rxjs';
 import { Items } from '../shared/interfaces/cliente';
 import { ClienteService } from '../shared/services/cliente.service';
 import { EstoqueService } from './estoque.service';
