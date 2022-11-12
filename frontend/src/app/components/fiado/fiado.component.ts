@@ -48,7 +48,6 @@ export class FiadoComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get("id")!;
     if(this.id){
       this.chargeClient();
-      
     }
   }
 
@@ -75,8 +74,8 @@ export class FiadoComponent implements OnInit {
   getTotalCost(lista: string = "Abatimento"): number {
     if(lista === "Abatimento") return this.cliente.aVer!.map(t => t.valor).reduce((acc, value) => acc + value, 0);
     else {
-      return this.cliente.items!.filter(el => !el.pago).map(t => t.valor * t.quantidade).reduce((acc, value) => acc + value, 0)
-    };
+      return this.cliente.items!.filter(el => !el.pago).map(t => t.valor * t.quantidade).reduce((acc, value) => acc + value, 0);
+    }
   }
 
   pagarFiado(){
