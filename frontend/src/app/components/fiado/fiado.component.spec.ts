@@ -167,6 +167,7 @@ describe('FiadoComponent', () => {
           pago: false
         });
 
+        const spyUpdateDataClient = spyOn(component, 'updateDataClient').and.callFake(() => { });
         spyOn(component, 'pagarFiado').and.returnValue(of(50));
   
         component.abterFiado();
@@ -175,6 +176,7 @@ describe('FiadoComponent', () => {
         expect(component.cliente.items).toEqual([]);
         expect(component.cliente.aVer).toEqual([]);
         expect(component.cliente.sobra).toEqual(0);
+        expect(spyUpdateDataClient).toHaveBeenCalled();
       });
       it('else - item pago', () => {
         component.cliente.divida = 50;
@@ -188,15 +190,14 @@ describe('FiadoComponent', () => {
           pago: true
         });
 
+        spyOn(component, 'updateDataClient').and.callFake(() => { });
         spyOn(component, 'pagarFiado').and.returnValue(of(10));
-        const spyChargeClient = spyOn(component, 'chargeClient').and.callFake(() => { });
 
         component.abterFiado();
 
         expect(component.cliente.sobra).toBe(10);
         expect(component.cliente.divida).toBe(40);
         expect(component.contadorFiado).toBe(1);
-        expect(spyChargeClient).toHaveBeenCalled();
       });
     });
     it('abater undefined', () => {
@@ -206,5 +207,13 @@ describe('FiadoComponent', () => {
 
       expect(spyPagarFiado).toHaveBeenCalled();
     });
+  });
+
+  it('should test updateDataClient', () => {
+    const spyChargeClient = spyOn(component, 'chargeClient').and.callFake(() => { });
+
+    component.updateDataClient();
+
+    expect(spyChargeClient).toHaveBeenCalled();
   });
 });

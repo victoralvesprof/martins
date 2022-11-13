@@ -87,6 +87,14 @@ export class FiadoComponent implements OnInit {
     return dialogRef.afterClosed();
   }
 
+  updateDataClient() {
+    this.clienteService.updateClient(this.cliente).pipe(
+      tap(() => this.chargeClient())
+    ).subscribe(res => {
+      console.log("fiado editado: ", this.cliente);
+    })
+  }
+
   abterFiado() {
     this.pagarFiado().subscribe((abater: number) => {
       console.log("abater test: ", abater);
@@ -115,11 +123,7 @@ export class FiadoComponent implements OnInit {
           this.cliente.aVer = [];
         }
   
-        this.clienteService.updateClient(this.cliente).pipe(
-          tap(() => this.chargeClient())
-        ).subscribe(res => {
-          console.log("fiado editado: ", this.cliente);
-        })
+        this.updateDataClient();
       }
     });
   }
