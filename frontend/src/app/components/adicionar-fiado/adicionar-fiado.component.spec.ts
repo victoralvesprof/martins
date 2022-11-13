@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { Cliente, Items } from '../shared/interfaces/cliente';
+import { Cliente, Items } from '../shared/interfaces/cliente.interface';
 import { ClienteService } from '../shared/services/cliente.service';
 
 import { AdicionarFiadoComponent } from './adicionar-fiado.component';

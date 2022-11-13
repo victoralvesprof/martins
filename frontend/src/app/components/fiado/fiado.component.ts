@@ -5,7 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
-import { Abatimento, Cliente, Items } from '../shared/interfaces/cliente';
+import { Abatimento, Cliente, Items } from '../shared/interfaces/cliente.interface';
 import { ClienteService } from '../shared/services/cliente.service';
 
 @Component({

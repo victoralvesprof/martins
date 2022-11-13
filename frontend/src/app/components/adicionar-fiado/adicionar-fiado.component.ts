@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { concatMap, last, tap } from 'rxjs';
-import { Items } from '../shared/interfaces/cliente';
+import { Items } from '../shared/interfaces/cliente.interface';
 import { ClienteService } from '../shared/services/cliente.service';
 import { EstoqueService } from './estoque.service';
 

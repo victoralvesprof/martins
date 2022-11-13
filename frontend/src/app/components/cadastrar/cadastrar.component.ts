@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Cliente } from '../shared/interfaces/cliente';
+import { Cliente } from '../shared/interfaces/cliente.interface';
 import { ClienteService } from '../shared/services/cliente.service';
 
 @Component({

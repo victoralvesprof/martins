@@ -7,7 +7,7 @@ import { By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { Cliente } from '../shared/interfaces/cliente';
+import { Cliente } from '../shared/interfaces/cliente.interface';
 import { ClienteService } from '../shared/services/cliente.service';
 
 import { ConsultarComponent } from './consultar.component';

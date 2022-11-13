@@ -7,7 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { concatMap, tap } from 'rxjs';
 
-import { Cliente } from '../shared/interfaces/cliente';
+import { Cliente } from '../shared/interfaces/cliente.interface';
 import { ClienteService } from '../shared/services/cliente.service';
 
 @Component({
