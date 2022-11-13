@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
-import { tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { Abatimento, Cliente, Items } from '../shared/interfaces/cliente';
 import { ClienteService } from '../shared/services/cliente.service';
 
@@ -78,21 +78,23 @@ export class FiadoComponent implements OnInit {
     }
   }
 
-  pagarFiado(){
-    this.abater = this.cliente.divida!;
+  pagarFiado(): Observable<number> {
     const dialogRef = this.dialog.open(PagarFiadoDialog, {
       width: '250px',
-      data: this.abater
+      data: this.cliente.divida!
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      this.abater = result;
-      console.log("abater: ", this.abater);
+    return dialogRef.afterClosed();
+  }
 
-      if(this.abater) {
-        this.cliente.sobra! += this.abater;
-        this.cliente.aVer?.push({valor: this.abater} as Abatimento)
-        this.cliente.divida! -= this.abater;
+  abterFiado() {
+    this.pagarFiado().subscribe((abater: number) => {
+      console.log("abater test: ", abater);
+  
+      if(abater > 0) {
+        this.cliente.sobra! += abater;
+        this.cliente.aVer?.push({valor: abater} as Abatimento)
+        this.cliente.divida! -= abater;
   
         this.cliente.items!.map((el: Items) => {
           if(!el.pago) {
@@ -107,7 +109,7 @@ export class FiadoComponent implements OnInit {
             return;
           }
         });
-
+        
         if(this.contadorFiado === this.cliente.items?.length) {
           this.cliente.items = [];
           this.cliente.aVer = [];

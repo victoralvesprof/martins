@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { Cliente } from '../shared/interfaces/cliente';
+import { Cliente, Items } from '../shared/interfaces/cliente';
 import { ClienteService } from '../shared/services/cliente.service';
 
-import { FiadoComponent } from './fiado.component';
+import { FiadoComponent, PagarFiadoDialog } from './fiado.component';
 import { FiadoModule } from './fiado.module';
 
 describe('FiadoComponent', () => {
@@ -25,14 +26,15 @@ describe('FiadoComponent', () => {
     items: [
       {
         descricao: '',
-        quantidade: 0,
+        quantidade: 1,
         data: new Date(),
         valor: 0,
         pago: false
       }
     ],
     divida: 0,
-    aVer: []
+    aVer: [],
+    sobra: 0
   };
 
   const MockActivatedRoute = {
@@ -86,6 +88,7 @@ describe('FiadoComponent', () => {
 
     fixture = TestBed.createComponent(FiadoComponent);
     component = fixture.componentInstance;
+    component.cliente = MockClient;
     fixture.detectChanges();
   });
 
@@ -128,18 +131,80 @@ describe('FiadoComponent', () => {
 
   describe('should test getTotalCost', () => {
     it('lista abatimento', () => {
-      component.cliente = MockClient;
-
       const callback = component.getTotalCost();
 
       expect(callback).toBe(0);
     });
     it('else', () => {
-      component.cliente = MockClient;
-
       const callback = component.getTotalCost('outro');
 
       expect(callback).toBe(0);
     });
-  })
+  });
+
+  it('should test pagarFiado', (done) => {
+    component.cliente.divida = 50;
+
+    spyOn(component.dialog, 'open').and.returnValue({ afterClosed: () => of(10) } as MatDialogRef<PagarFiadoDialog>);
+
+    component.pagarFiado().subscribe(res => {
+      expect(res).toBe(10);
+      done();
+    });
+  });
+
+  describe('should test abterFiado', () => {
+    describe('abater > 0', () => {
+      it('if - item nao pago', () => {
+        component.cliente.divida = 50;
+
+        component.cliente.items = [];
+        component.cliente.items.push({
+          descricao: '',
+          quantidade: 1,
+          data: new Date(),
+          valor: 50,
+          pago: false
+        });
+
+        spyOn(component, 'pagarFiado').and.returnValue(of(50));
+  
+        component.abterFiado();
+  
+        expect(component.contadorFiado).toBe(1);
+        expect(component.cliente.items).toEqual([]);
+        expect(component.cliente.aVer).toEqual([]);
+        expect(component.cliente.sobra).toEqual(0);
+      });
+      it('else - item pago', () => {
+        component.cliente.divida = 50;
+
+        component.cliente.items = [];
+        component.cliente.items.push({
+          descricao: '',
+          quantidade: 1,
+          data: new Date(),
+          valor: 10,
+          pago: true
+        });
+
+        spyOn(component, 'pagarFiado').and.returnValue(of(10));
+        const spyChargeClient = spyOn(component, 'chargeClient').and.callFake(() => { });
+
+        component.abterFiado();
+
+        expect(component.cliente.sobra).toBe(10);
+        expect(component.cliente.divida).toBe(40);
+        expect(component.contadorFiado).toBe(1);
+        expect(spyChargeClient).toHaveBeenCalled();
+      });
+    });
+    it('abater undefined', () => {
+      const spyPagarFiado = spyOn(component, 'pagarFiado').and.returnValue(of(0));
+
+      component.abterFiado();
+
+      expect(spyPagarFiado).toHaveBeenCalled();
+    });
+  });
 });
