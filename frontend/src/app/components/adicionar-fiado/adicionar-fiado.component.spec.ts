@@ -88,6 +88,9 @@ describe('AdicionarFiadoComponent', () => {
   });
 
   it('should create', () => {
+    component.product;
+    component.quantidade;
+
     expect(component).toBeTruthy();
   });
 

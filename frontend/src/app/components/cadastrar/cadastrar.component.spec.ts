@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder } from '@angular/forms';
 import { MatSnackBar, MatSnackBarRef, TextOnlySnackBar } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -68,11 +69,14 @@ describe('CadastrarComponent', () => {
     }
   };
   
-  let MockRouter = {
-    navigate: jasmine.createSpy('navigate')
+  let MockRouter: {
+    navigate: jasmine.Spy
   };
 
   beforeEach(async () => {
+    MockRouter = {
+      navigate: jasmine.createSpy('navigate')
+    };
     await TestBed.configureTestingModule({
       imports: [ 
         CadastrarModule,
@@ -82,7 +86,8 @@ describe('CadastrarComponent', () => {
         { provide: ClienteService, useValue: MockClienteService },
         { provide: ActivatedRoute, useValue: MockActivatedRoute },
         { provide: HttpClient, useValue: MockHttpClient },
-        { provide: Router, useValue: MockRouter }
+        { provide: Router, useValue: MockRouter },
+        FormBuilder 
       ]
     })
     .compileComponents();
@@ -93,6 +98,13 @@ describe('CadastrarComponent', () => {
   });
 
   it('should create', () => {
+    component.name;
+    component.endereco;
+    component.cpf;
+    component.rg;
+    component.email;
+    component.gender;
+
     expect(component).toBeTruthy();
   });
 
@@ -101,6 +113,12 @@ describe('CadastrarComponent', () => {
 
     expect(component.isEditar).toBeTruthy();
     expect(component.cliente).toEqual(MockClient);
+  });
+
+  it('should test cancel', () => {
+    component.cancel();
+
+    expect(MockRouter.navigate).toHaveBeenCalledOnceWith(['/consultar']);
   });
 
   describe('should test onSubmit', () => {

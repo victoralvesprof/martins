@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
 import { Cliente } from '../interfaces/cliente.interface';
 
 import { ClienteService } from './cliente.service';
@@ -9,16 +10,16 @@ describe('ClienteService', () => {
 
   const MockHttpClient = {
     get() {
-      return undefined;
+      return of(undefined);
     },
     post() {
-      return undefined;
+      return of(undefined);
     },
     put() {
-      return undefined;
+      return of(undefined);
     },
     delete() {
-      return undefined;
+      return of(undefined);
     }
   };
 
@@ -35,33 +36,38 @@ describe('ClienteService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should test getAllClients', () => {
-    const callback = service.getAllClients();
-    
-    expect(callback).toBeUndefined();
+  it('should test getAllClients', (done) => {
+    service.getAllClients().subscribe(res => {
+      expect(res).toBeUndefined();
+      done();
+    });
   });
 
-  it('should test getOnlyClient', () => {
-    const callback = service.getOnlyClient('');
-    
-    expect(callback).toBeUndefined();
+  it('should test getOnlyClient', (done) => {
+    service.getOnlyClient('').subscribe(res => {
+      expect(res).toBeUndefined();
+      done();
+    });
   });
 
-  it('should test newClient', () => {
-    const callback = service.newClient({} as Cliente);
-    
-    expect(callback).toBeUndefined();
+  it('should test newClient', (done) => {
+    service.newClient({} as Cliente).subscribe(res => {
+      expect(res).toBeUndefined();
+      done();
+    });
   });
 
-  it('should test updateClient', () => {
-    const callback = service.updateClient({} as Cliente);
-    
-    expect(callback).toBeUndefined();
+  it('should test updateClient', (done) => {
+    service.updateClient({} as Cliente).subscribe(res => {
+      expect(res).toBeUndefined();
+      done();
+    });
   });
 
-  it('should test removeClient', () => {
-    const callback = service.removeClient('');
-    
-    expect(callback).toBeUndefined();
+  it('should test removeClient', (done) => {
+    service.removeClient('').subscribe(res => {
+      expect(res).toBeUndefined();
+      done();
+    });
   });
 });

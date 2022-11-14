@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,9 +12,11 @@ import { ClienteService } from '../shared/services/cliente.service';
 import { FiadoComponent, PagarFiadoDialog } from './fiado.component';
 import { FiadoModule } from './fiado.module';
 
-describe('FiadoComponent', () => {
+describe('FiadoComponent and PagarFiadoDialog', () => {
   let component: FiadoComponent;
+  let component2: PagarFiadoDialog; 
   let fixture: ComponentFixture<FiadoComponent>;
+  let fixture2: ComponentFixture<PagarFiadoDialog>;
 
   const MockClient: Cliente = {
     nome: "",
@@ -68,6 +70,12 @@ describe('FiadoComponent', () => {
     }
   };
 
+  const MockMatDialogRef = {
+    close() {
+      return true;
+    }
+  };
+
   let MockRouter: { navigate: jasmine.Spy };
 
   beforeEach(async () => {
@@ -81,19 +89,28 @@ describe('FiadoComponent', () => {
         { provide: ClienteService, useValue: MockClienteService },
         { provide: ActivatedRoute, useValue: MockActivatedRoute },
         { provide: HttpClient, useValue: MockHttpClient },
-        { provide: Router, useValue: MockRouter }
+        { provide: Router, useValue: MockRouter },
+        { provide: MatDialogRef, useValue: MockMatDialogRef },
+        { provide: MAT_DIALOG_DATA, useValue: {} },
       ]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(FiadoComponent);
+    fixture2 = TestBed.createComponent(PagarFiadoDialog);
     component = fixture.componentInstance;
+    component2 = fixture2.componentInstance;
     component.cliente = MockClient;
     fixture.detectChanges();
+    fixture2.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should create component 2', () => {
+    expect(component2).toBeTruthy();
   });
 
   it('should test ngOnInit', () => {
@@ -131,14 +148,33 @@ describe('FiadoComponent', () => {
 
   describe('should test getTotalCost', () => {
     it('lista abatimento', () => {
+      component.cliente.aVer?.push({valor: 1});
+      component.cliente.aVer?.push({valor: 1});
+      component.cliente.aVer?.push({valor: 1});
       const callback = component.getTotalCost();
 
-      expect(callback).toBe(0);
+      expect(callback).toBe(3);
     });
     it('else', () => {
+      component.cliente.items?.push({
+        descricao: '',
+        quantidade: 1,
+        data: new Date(),
+        valor: 1,
+        pago: false,
+      });
+
+      component.cliente.items?.push({
+        descricao: '',
+        quantidade: 1,
+        data: new Date(),
+        valor: 1,
+        pago: false,
+      });
+
       const callback = component.getTotalCost('outro');
 
-      expect(callback).toBe(0);
+      expect(callback).toBe(2);
     });
   });
 
@@ -175,7 +211,6 @@ describe('FiadoComponent', () => {
         expect(component.contadorFiado).toBe(1);
         expect(component.cliente.items).toEqual([]);
         expect(component.cliente.aVer).toEqual([]);
-        expect(component.cliente.sobra).toEqual(0);
         expect(spyUpdateDataClient).toHaveBeenCalled();
       });
       it('else - item pago', () => {
@@ -215,5 +250,11 @@ describe('FiadoComponent', () => {
     component.updateDataClient();
 
     expect(spyChargeClient).toHaveBeenCalled();
+  });
+
+  it('should test onNoClick', () => {
+    component2.onNoClick();
+
+    expect(component2.data).toBe('');
   });
 });

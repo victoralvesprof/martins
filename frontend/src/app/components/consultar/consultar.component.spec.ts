@@ -1,7 +1,8 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { HttpClient } from '@angular/common/http';
+import { ChangeDetectorRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -107,9 +108,17 @@ describe('ConsultarComponent', () => {
   });
 
   it('should test applyFilter', () => {
-    component.filter = ''
-
+    component.filter = '';
+    const lista = [];
+    lista.push(MockClient);
+    lista.push(MockClient);
+    component.dataSource = new MatTableDataSource(lista as any);
+    component.dataSource.paginator = component.paginator;
+    const spyFirstPage = spyOn(component.dataSource.paginator, 'firstPage').and.callFake(() => { });
+    
     const callback = component.applyFilter();
+
+    expect(spyFirstPage).toHaveBeenCalled();
 
     expect(callback).toBeUndefined();
   });

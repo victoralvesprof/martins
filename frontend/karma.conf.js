@@ -38,7 +38,8 @@ module.exports = function (config) {
         '!./src/app/testing/**',
         '!./src/**/*.spec.(ts|js)',
         '!./src/**/*.testing.*.(ts|js)',
-        '!./src/**/*.module.(ts|js)'
+        '!./src/**/*.module.(ts|js)',
+        '!./src/**/*.interface.ts'
       ]
     },
     reporters: ['progress', 'kjhtml', 'sabarivka'],

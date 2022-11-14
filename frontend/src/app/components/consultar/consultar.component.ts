@@ -46,6 +46,7 @@ export class ConsultarComponent implements OnInit {
     this.dataSource.filter = this.filter.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
+      console.log('entrouuuu')
       this.dataSource.paginator.firstPage();
     }
   }
