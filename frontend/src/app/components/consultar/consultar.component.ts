@@ -1,9 +1,9 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, AfterViewInit, ViewChild, OnInit } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { Router } from '@angular/router';
 import { concatMap, tap } from 'rxjs';
 

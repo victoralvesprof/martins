@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, Inject, OnInit, ViewChild } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatLegacyDialog as MatDialog, MatLegacyDialogRef as MatDialogRef, MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
+import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 import { Abatimento, Cliente, Items } from '../shared/interfaces/cliente.interface';

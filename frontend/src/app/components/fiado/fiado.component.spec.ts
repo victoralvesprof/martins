@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatLegacyDialogRef as MatDialogRef, MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';

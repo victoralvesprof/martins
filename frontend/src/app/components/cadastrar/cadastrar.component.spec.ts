@@ -1,15 +1,14 @@
-import { HttpClient } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormBuilder } from '@angular/forms';
-import { MatSnackBar, MatSnackBarRef, TextOnlySnackBar } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 import { Cliente } from '../shared/interfaces/cliente.interface';
 import { ClienteService } from '../shared/services/cliente.service';
 
 import { CadastrarComponent } from './cadastrar.component';
 import { CadastrarModule } from './cadastrar.module';
+import { FormBuilder } from '@angular/forms';
 
 describe('CadastrarComponent', () => {
   let component: CadastrarComponent;
@@ -70,7 +69,7 @@ describe('CadastrarComponent', () => {
   };
   
   let MockRouter: {
-    navigate: jasmine.Spy
+    navigate: jasmine.SpyObjPropertyNames
   };
 
   beforeEach(async () => {
