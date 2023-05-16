@@ -1,7 +1,7 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://vhcalves:Root_1234@cluster0.3hzro9z.mongodb.net/martins-clientes");
+mongoose.connect("mongodb+srv://vhcalves:Root_1234@cluster0.3hzro9z.mongodb.net/?retryWrites=true&w=majority");
 
-let db = mongoose.connection;
+const db = mongoose.connection;
 
 export default db;
