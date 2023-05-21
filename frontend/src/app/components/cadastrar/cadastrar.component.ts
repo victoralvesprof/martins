@@ -126,7 +126,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   constructorNewClient(): Cliente {
-    const copy: Cliente = JSON.parse(JSON.stringify(this.cliente));
+    const copy: Cliente = {...this.cliente};
     
     copy.nome = this.form.value.name as string;
     copy.endereco = this.form.value.endereco as string;

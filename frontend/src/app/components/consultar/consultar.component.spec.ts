@@ -1,10 +1,6 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatLegacyPaginator as MatPaginator, MatLegacyPaginatorIntl as MatPaginatorIntl } from '@angular/material/legacy-paginator';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
-import { By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
@@ -13,6 +9,7 @@ import { ClienteService } from '../shared/services/cliente.service';
 
 import { ConsultarComponent } from './consultar.component';
 import { ConsultarModule } from './consultar.module';
+import { MatTableDataSource } from '@angular/material/table';
 
 describe('ConsultarComponent', () => {
   let component: ConsultarComponent;
