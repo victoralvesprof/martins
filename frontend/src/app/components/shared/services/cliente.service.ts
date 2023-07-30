@@ -30,8 +30,8 @@ export class ClienteService {
     return this.http.post(this.baseUrlClient + '/clientes', newClient);
   }
 
-  updateClient(editClient: Cliente): Observable<any>{
-    return this.http.put(this.baseUrlClient + `/clientes/${editClient._id}`, editClient);
+  updateClient(editClient: Cliente, id: string): Observable<any>{
+    return this.http.put(this.baseUrlClient + `/clientes/${id}`, editClient);
   }
 
   removeClient(id: string): Observable<any> {

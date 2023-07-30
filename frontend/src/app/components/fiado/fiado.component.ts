@@ -87,7 +87,7 @@ export class FiadoComponent implements OnInit {
   }
 
   updateDataClient() {
-    this.clienteService.updateClient(this.cliente).pipe(
+    this.clienteService.updateClient(this.cliente, this.id).pipe(
       tap(() => this.chargeClient())
     ).subscribe(res => {
       console.log("fiado editado: ", this.cliente);

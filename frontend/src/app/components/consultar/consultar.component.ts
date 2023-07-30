@@ -66,8 +66,8 @@ export class ConsultarComponent implements OnInit {
 
   removeClient() {
     this.clienteService.removeClient(this.selection.selected[0]._id!).pipe(
-      tap(() => {
-        this._snackBar.open("Registro salvo com sucesso!", "x", {duration: 3000, panelClass: 'success'});
+      tap((res) => {
+        this._snackBar.open(`${res.msg}`, "x", {duration: 3000, panelClass: 'success'});
         this.selection.clear();
       }),
       concatMap(() => this.clienteService.getAllClients())

@@ -1,5 +1,5 @@
 import { OnInit, Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -12,53 +12,8 @@ import { ClienteService } from '../shared/services/cliente.service';
   styleUrls: ['./cadastrar.component.scss']
 })
 export class CadastrarComponent implements OnInit {
-  isEditar: boolean = false;
-  cliente: Cliente = {
-    nome: "",
-    endereco: "",
-    cpf: "",
-    rg: "",
-    email: "",
-    sexo: 0,
-    items: [],
-    divida: 0,
-    aVer: []
-  };
-
-  form = this.fb.group({
-    name: ['', {
-      Validators: [
-        Validators.required
-      ]
-    }],
-    endereco: ['', {
-      Validators: [
-        Validators.required
-      ]
-    }],
-    cpf: ['', {
-      Validators: [
-        Validators.required
-      ]
-    }],
-    rg: ['', {
-      Validators: [
-        Validators.required
-      ]
-    }],
-    email: ['', {
-        validators: [
-            Validators.required, 
-            Validators.email
-        ],
-        updateOn: 'blur'
-    }],
-    gender: ['masculino', {
-      validators: [
-        Validators.required
-      ]
-    }]
-  });  
+  form!: FormGroup;
+  clientID!: string;
   
   constructor(
     private fb: FormBuilder,
@@ -68,38 +23,49 @@ export class CadastrarComponent implements OnInit {
     private clienteService: ClienteService) { }
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.paramMap.get("id");
-    if(id){
-      this.isEditar = true;
-      this.clienteService.getOnlyClient(id).subscribe((res: any) => {
-        console.log("RESPOSTA edicao cliente: ", res);
-        this.cliente = res;
+    this.clientID = this.activatedRoute.snapshot.paramMap.get("id")!;
+
+    if(this.clientID){
+      this.clienteService.getOnlyClient(this.clientID).subscribe((cliente: Cliente) => {
+        this.initializeForm(cliente);
       });
+    } else {
+      this.initializeForm();
     }
   }
 
-  get name() {
-    return this.form.controls['name'];
-  }
-
-  get endereco() {
-    return this.form.controls['endereco'];
-  }
-
-  get cpf() {
-    return this.form.controls['cpf'];
-  }
-
-  get rg() {
-    return this.form.controls['rg'];
-  }
-
-  get email() {
-    return this.form.controls['email'];
-  }
-
-  get gender() {
-    return this.form.controls['gender'];
+  initializeForm(cliente?: Cliente) {
+    this.form = this.fb.group({
+      nome: [cliente?.nome ?? '', {
+        Validators: [
+          Validators.required
+        ]
+      }],
+      endereco: [cliente?.endereco ?? '', {
+        Validators: [
+          Validators.required
+        ]
+      }],
+      cpf: [cliente?.cpf ?? '', {
+        Validators: [
+          Validators.required
+        ]
+      }],
+      rg: [cliente?.rg ?? '', {
+        Validators: [
+          Validators.required
+        ]
+      }],
+      email: [cliente?.email ?? '', Validators.compose([
+        Validators.required, 
+        Validators.email,
+      ])],
+      sexo: [cliente?.sexo ?? 'masculino', {
+        validators: [
+          Validators.required
+        ]
+      }]
+    });
   }
   
   cancel(): void {
@@ -107,36 +73,20 @@ export class CadastrarComponent implements OnInit {
 	}
 
   onSubmit() {
-    if(this.isEditar) {
-      this.clienteService.updateClient(this.cliente).subscribe(res => {
+    if(this.clientID) {
+      this.clienteService.updateClient(this.form.value, this.clientID).subscribe(res => {
         console.log("RESPOSTA edicao cliente: ", res);
-        this._snackBar.open("Registro editado com sucesso!", "x", {duration: 3000, panelClass: 'success'});
+        this._snackBar.open(`${res.msg}`, "x", {duration: 3000, panelClass: 'success'});
         this.form.reset();
         this.router.navigate(['/consultar']);
       });
     } else {
-      const newClient = this.constructorNewClient();
-      this.clienteService.newClient(newClient).subscribe(res => {
+      this.clienteService.newClient(this.form.value).subscribe(res => {
         console.log("RESPOSTA novo cliente: ", res);
-        this._snackBar.open("Registro criado com sucesso!", "x", {duration: 3000, panelClass: 'success'});
+        this._snackBar.open(`${res.msg}`, "x", {duration: 3000, panelClass: 'success'});
         this.router.navigate(['/consultar']);
         this.form.reset();
       });
     }
-  }
-
-  constructorNewClient(): Cliente {
-    const copy: Cliente = {...this.cliente};
-    
-    copy.nome = this.form.value.name as string;
-    copy.endereco = this.form.value.endereco as string;
-    copy.cpf = this.form.value.cpf as string;
-    copy.rg = this.form.value.rg as string;
-    copy.email = this.form.value.email as string;
-    copy.items = [];
-    copy.aVer = new Array<any>();
-    copy.aVer.push({data: new Date(0), valor: 0});
-
-    return copy;
   }
 }

@@ -90,7 +90,7 @@ export class AdicionarFiadoComponent implements OnInit {
           res.items.push(newItem);
           res.divida = res.items.map((t: Items) => t.valor * t.quantidade).reduce((acc: number, value: number) => acc + value, 0) 
         }),
-        concatMap(res => this.clienteService.updateClient(res)),
+        concatMap(res => this.clienteService.updateClient(res, res._id)),
         last()
       )
       .subscribe((res: any) => {
