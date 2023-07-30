@@ -22,11 +22,11 @@ class Producer {
         console.log("exchange");
 
         await this.channel.publish(
-            exchangeName, 
+            exchangeName,
             routingKey,
             Buffer.from(JSON.stringify(logDetails))
         );
-        console.log(`The message ${message} is sent to exchange ${exchangeName}`);
+        console.log(`The message ${JSON.stringify(message)} is sent to exchange ${exchangeName}`);
     }
 }
 

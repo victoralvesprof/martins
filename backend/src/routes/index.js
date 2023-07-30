@@ -1,5 +1,6 @@
 import express from "express";
 import clientes from "./clientesRoutes.js";
+// import estoques from "./estoqueRoutes.js";
 import cors from 'cors';
 
 const allowedOrigins = [
@@ -13,7 +14,20 @@ const routes = (app) => {
   })
   app.use(
     express.json(),
-    clientes
+    cors({
+      optionsSuccessStatus: 200,
+      origin: function(origin, callback) {
+        if(!origin) return callback(null, true);
+        if(allowedOrigins.indexOf(origin) === -1){ 
+          const msg = 'A política CORS para este site não ' + 
+                    'permite acesso da Origem especificada.'; 
+          return callback(new Error(msg), false); 
+        }
+        return callback(null, true);
+      }
+    }),
+    clientes,
+    // estoques
   );
 }
 

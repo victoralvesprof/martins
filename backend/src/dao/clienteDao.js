@@ -2,59 +2,85 @@ import clientes from "../models/Cliente.js";
 
 class ClienteDao {
 
-    static listarTodosClientes = (req, res) => {
-        clientes.find((err, clientes) => {
-            res.status(200).json(clientes)
-        })
+    static listarTodosClientes = async (req, res) => {
+        try {
+            await clientes.find()
+            .then(allClientes => res.status(200).json(allClientes))
+            .catch(err => res.status(500).json(err))
+        } catch (err) {
+            res.status(500).json(err)
+        }
     }
 
-    static listarUnicoCliente = (req, res) => {
+    static listarUnicoCliente = async (req, res) => {
         const id = req.params.id;
+        
+        try {
+            await clientes.findById(id)
+            .then((clientesResultado) => res.status(200).send(clientesResultado))
+            .catch((err) => res.status(400).send({ message: `${err.message} - ID do Cliente não localizado.` }))
+        } catch (err) {
+            res.status(500).json(err);
+            res.status(400).json(err);
+        }
+    }
 
-        clientes.findById(id)
-            .exec((err, clientes) => {
-                if (err) {
-                    res.status(400).send({ message: `${err.message} - ID do Cliente não localizado.` })
-                } else {
-                    res.status(200).send(clientes);
-                }
+    static addCliente = async (req, res) => {
+        try{
+            const cliente = new clientes(req.body);
+    
+            await cliente.save()
+            .then((savedClient) => {
+                console.log("retornou salvo: ", savedClient);
+                res.status(201).json({ msg: 'Registro criado com sucesso!' });
             })
+            .catch((err) => {
+                console.log("erro ao salvar: ", err);
+                res.status(500).json({ msg: err.message });
+            })
+        } catch(err) {
+            console.log("erro catch de fora salvar: ", err);
+            res.status(500).json({ msg: err.message });
+        }
     }
 
-    static addCliente = (req, res) => {
-        let cliente = new clientes(req.body);
-
-        cliente.save((err) => {
-            if (err) {
-                res.status(500).send({ message: `${err.message} - Falha ao cadastrar cliente.` })
-            } else {
-                res.status(201).send(cliente.toJSON())
-            }
-        })
+    static atualizarCliente = async (req, res) => {
+        try{
+            const id = req.params.id;
+            const updateClient = req.body;
+    
+            await clientes.findOneAndUpdate({_id: id}, { $set: updateClient }, {new: true})
+            .then((updateClient) => {
+                console.log("retornou update: ", updateClient);
+                res.status(200).json({ msg: 'Registro editado com sucesso!' });
+            })
+            .catch((err) => {
+                console.log("error update: ", err);
+                res.status(500).json({ msg: err.message });
+            })
+        } catch(err) {
+            console.log("error catch de fora update: ", err);
+            res.status(500).json({ msg: err.message });
+        }
     }
 
-    static atualizarCliente = (req, res) => {
+    static deletarCliente = async (req, res) => {
         const id = req.params.id;
 
-        clientes.findByIdAndUpdate(id, { $set: req.body }, (err) => {
-            if (!err) {
-                res.status(200).send({ message: 'Cliente atualizado com sucesso' })
-            } else {
-                res.status(500).send({ message: err.message })
-            }
-        })
-    }
-
-    static deletarCliente = (req, res) => {
-        const id = req.params.id;
-
-        clientes.findByIdAndDelete(id, (err) => {
-            if (!err) {
-                res.status(200).send({ message: 'Cliente removido com sucesso' })
-            } else {
-                res.status(500).send({ message: err.message })
-            }
-        })
+        try {
+            await clientes.findByIdAndDelete(id)
+            .then((deleteProduct) => {
+                console.log(deleteProduct);
+                res.status(200).json({ msg: 'Registro removido com sucesso!' });
+            })
+            .catch((error) => {
+                console.log(error);
+                res.status(500).json({ message: error.message });
+            })
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: error.message });
+        }
     }
 }
 
