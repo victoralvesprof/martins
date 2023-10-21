@@ -6,27 +6,32 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="outline">
             <mat-label>Nome completo</mat-label>
-            <input matInput maxlength="50" type="text" name="name" placeholder="Victor hugo Carvalho Alves" formControlName="nome">
+            <input matInput maxlength="50" type="text" name="name" placeholder="Victor hugo Carvalho Alves" formControlName="nome" required>
+            <mat-error *ngIf="this.form.get('nome')?.invalid">O nome é obrigatório</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Endereço</mat-label>
-                <textarea matInput maxlength="120" placeholder="Ex. Rua Manuel Vitorino, 10 - baitinga de cima" name="endereco" formControlName="endereco"></textarea>
+                <textarea matInput maxlength="120" placeholder="Ex. Rua Manuel Vitorino, 10 - baitinga de cima" name="endereco" formControlName="endereco" required></textarea>
+                <mat-error *ngIf="this.form.get('endereco')?.invalid">O endereço é obrigatório</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>CPF</mat-label>
-            <input matInput minlength="11" maxlength="11" type="text" name="cpf" placeholder="01347898573" formControlName="cpf">
+            <input matInput minlength="11" maxlength="11" type="text" name="cpf" placeholder="01347898573" formControlName="cpf" required>
+            <mat-error *ngIf="this.form.get('cpf')?.invalid">{{getErrorMessageCPF()}}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Documento</mat-label>
-            <input matInput type="text" name="rg" placeholder="0929774213" formControlName="rg">
+            <input matInput type="text" name="rg" placeholder="0929774213" formControlName="rg" required>
+            <mat-error *ngIf="this.form.get('rg')?.invalid">O RG é obrigatório</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
-            <input matInput type="email" maxlength="256" name="email" placeholder="victoralves.prof@gmail.com" formControlName="email">
+            <input matInput type="email" maxlength="256" name="email" placeholder="victoralves.prof@gmail.com" formControlName="email" required>
+            <mat-error *ngIf="this.form.get('email')?.invalid">{{getErrorMessageEmail()}}</mat-error>
         </mat-form-field>
 
         <mat-radio-group formControlName="sexo">

@@ -29,17 +29,32 @@ const routes: Routes = [
   { 
     path: '**', 
     redirectTo: 'consultar' 
-  }
+  },
   // {
   //   path: 'consultar',
   //   loadChildren: () =>
-  //     import(`./moduleTwo/module-two.module`).then((m) => m.ModuleTwoModule),
+  //     import(`./components/consultar/consultar.module`).then((m) => m.ConsultarModule),
   // },
   // {
-  //   path: 'editar',
+  //   path: 'cadastrar',
   //   loadChildren: () =>
-  //     import(`./moduleOne/module-one.module`).then((m) => m.ModuleOneModule),
+  //     import(`./components/cadastrar/cadastrar.module`).then((m) => m.CadastrarModule),
   // },
+  // {
+  //   path: 'editar/:id',
+  //   loadChildren: () =>
+  //     import(`./components/cadastrar/cadastrar.module`).then((m) => m.CadastrarModule),
+  // },
+  // {
+  //   path: 'fiado/:id',
+  //   loadChildren: () =>
+  //     import(`./components/fiado/fiado.module`).then((m) => m.FiadoModule),
+  // },
+  // {
+  //   path: 'adicionar-fiado/:id',
+  //   loadChildren: () =>
+  //     import(`./components/adicionar-fiado/adicionar-fiado.module`).then((m) => m.AdicionarFiadoModule),
+  // }
 ];
 
 @NgModule({

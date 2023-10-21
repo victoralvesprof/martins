@@ -46,11 +46,10 @@ export class CadastrarComponent implements OnInit {
           Validators.required
         ]
       }],
-      cpf: [cliente?.cpf ?? '', {
-        Validators: [
-          Validators.required
-        ]
-      }],
+      cpf: [cliente?.cpf ?? '', Validators.compose([
+        Validators.required, 
+        Validators.minLength(11)
+      ])],
       rg: [cliente?.rg ?? '', {
         Validators: [
           Validators.required
@@ -88,5 +87,19 @@ export class CadastrarComponent implements OnInit {
         this.form.reset();
       });
     }
+  }
+
+  getErrorMessageEmail(): string {
+    if (this.form.get('email')?.hasError('required')) 
+      return 'Você deve entrar com o email';
+  
+    return 'Este email não é válido';
+  }
+
+  getErrorMessageCPF(): string {
+    if(this.form.get('cpf')?.hasError('required')) 
+        return 'O CPF é obrigatório';
+
+    return 'O CPF deve conter 11 números';
   }
 }

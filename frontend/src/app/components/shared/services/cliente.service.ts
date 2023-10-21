@@ -13,28 +13,22 @@ export class ClienteService {
   constructor(public http: HttpClient) { }
 
   getAllClients(): Observable<any> {
-    // const headers = new HttpHeaders()
-    //   .append('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
-    //   .append('Content-Type', 'application/json; charset=utf-8')
-    //   .append('ETag', `W/"e26-lchCs6o6uvrNdfq6rONJlBa7gw4"`)
-    //   .append('Access-Control-Allow-Origin', '*')
-    //   .append('Access-Control-Allow-Methods', 'POST, PUT, GET, OPTIONS')
-    return this.http.get(this.baseUrlClient + '/clientes');
+    return this.http.get(this.baseUrlClient);
   }
 
   getOnlyClient(id: string): Observable<any>{
-    return this.http.get(this.baseUrlClient + `/clientes/${id}`);
+    return this.http.get(this.baseUrlClient + id);
   }
 
   newClient(newClient: Cliente): Observable<any> {
-    return this.http.post(this.baseUrlClient + '/clientes', newClient);
+    return this.http.post(this.baseUrlClient, newClient);
   }
 
   updateClient(editClient: Cliente, id: string): Observable<any>{
-    return this.http.put(this.baseUrlClient + `/clientes/${id}`, editClient);
+    return this.http.put(this.baseUrlClient + id, editClient);
   }
 
   removeClient(id: string): Observable<any> {
-    return this.http.delete<Observable<any>>(this.baseUrlClient + `/clientes/${id}`);
+    return this.http.delete<Observable<any>>(this.baseUrlClient + id);
   }
 }
