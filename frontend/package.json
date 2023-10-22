@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test-coverage": "ng test --no-watch --code-coverage"
+    "test-coverage": "ng test --no-watch --code-coverage",
+    "prepare": "cd .. && husky install frontend/.husky"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +33,8 @@
     "@angular-devkit/build-angular": "^15.2.9",
     "@angular/cli": "^15.2.9",
     "@angular/compiler-cli": "^15.2.9",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
     "@types/jasmine": "^4.3.5",
     "jasmine-core": "^5.1.0",
     "karma": "^6.4.2",
@@ -39,6 +42,7 @@
     "karma-coverage": "^2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "husky": "^8.0.0"
   }
 }
