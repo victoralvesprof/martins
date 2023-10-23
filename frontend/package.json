@@ -8,8 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-coverage": "ng test --no-watch --code-coverage",
-    "prepare": "cd .. && husky install frontend/.husky",
-    "commitizen": "commitizen"
+    "prepare": "cd .. && husky install frontend/.husky"
   },
   "private": true,
   "dependencies": {
