@@ -58,7 +58,7 @@ describe('ClienteService', () => {
   });
 
   it('should test updateClient', (done) => {
-    service.updateClient({} as Cliente).subscribe(res => {
+    service.updateClient({} as Cliente, '').subscribe(res => {
       expect(res).toBeUndefined();
       done();
     });

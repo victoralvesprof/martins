@@ -1,0 +1,272 @@
+[
+    {
+        "nome": "victor Hugo Carvalho Alves",
+        "endereco": "Rua Manuel Vitorino, 10 - Baitinga de cima",
+        "cpf": "01347898573",
+        "rg": "0929774213",
+        "email": "victoralves.prof@gmail.com",
+        "sexo": "masculino",
+        "items": [
+            {
+                "descricao": "shampoo clear man",
+                "quantidade": 1,
+                "data": "09/09/2021",
+                "valor": 35.50
+            },
+            {
+                "descricao": "fralda",
+                "quantidade": 10,
+                "data": "09/06/2021",
+                "valor": 8
+            },
+            {
+                "descricao": "Anador",
+                "quantidade": 1,
+                "data": "09/09/2022",
+                "valor": 4.50
+            },
+            {
+                "descricao": "epocler",
+                "quantidade": 6,
+                "data": "09/09/2019",
+                "valor": 26.92
+            }
+        ],
+        "divida": 146.92,
+        "aVer": [
+            {
+                "data": "10/06/2021",
+                "valor": 20.42
+            },
+            {
+                "valor": 27.00,
+                "data": "01/01/2021"
+            }
+        ]
+    },
+    {
+        "nome": "Priscila de Almeida Nóbrega",
+        "endereco": "Rua Goes Calmon, 38 - Matadouro",
+        "cpf": "78998774511",
+        "rg": "0929774211",
+        "email": "pri.nobrega@gmail.com",
+        "sexo": "feminino",
+        "items": [
+            {
+                "descricao": "shampoo clear woman",
+                "quantidade": 1,
+                "data": "09/09/2021",
+                "valor": 36.50
+            },
+            {
+                "descricao": "fralda",
+                "quantidade": 10,
+                "data": "09/06/2021",
+                "valor": 8.00
+            },
+            {
+                "descricao": "anitta",
+                "quantidade": 1,
+                "data": "09/09/2022",
+                "valor": 9.50
+            },
+            {
+                "descricao": "engov",
+                "quantidade": 6,
+                "data": "09/09/2019",
+                "valor": 20.92
+            }
+        ],
+        "divida": 146.92,
+        "aVer": [
+            {
+                "data": "10/06/2021",
+                "valor": 20.42
+            },
+            {
+                "data": "10/09/2021",
+                "valor": 28.00
+            }
+        ]
+    },
+    {
+        "nome": "Matheus Alves",
+        "endereco": "Rua Manuel Vitorino, 10 - Baitinga de cima",
+        "cpf": "01147898573",
+        "rg": "1929774213",
+        "email": "teteu.handsome@gmail.com",
+        "sexo": "masculino",
+        "items": [
+            {
+                "descricao": "sabonete protex",
+                "quantidade": 5,
+                "data": "09/09/2021",
+                "valor": 35.50
+            },
+            {
+                "descricao": "Tandrilax",
+                "quantidade": 1,
+                "data": "09/06/2021",
+                "valor": 6
+            },
+            {
+                "descricao": "Protetor Solar",
+                "quantidade": 1,
+                "data": "09/09/2022",
+                "valor": 71.20
+            },
+            {
+                "descricao": "epocler",
+                "quantidade": 6,
+                "data": "09/09/2019",
+                "valor": 26.92
+            }
+        ],
+        "divida": 146.92,
+        "aVer": [
+            {
+                "data": "10/06/2021",
+                "valor": 20.42
+            },
+            {
+                "data": "02/12/2021",
+                "valor": 29.01
+            }
+        ]
+    },
+    {
+        "nome": "victor Hugo Carvalho Alves",
+        "endereco": "Rua Manuel Vitorino, 10 - Baitinga de cima",
+        "cpf": "01347898575",
+        "rg": "0929774213",
+        "email": "victoralves.prof@gmail.com",
+        "sexo": "masculino",
+        "items": [
+            {
+                "descricao": "shampoo clear man",
+                "quantidade": 1,
+                "data": "09/09/2021",
+                "valor": 35.50
+            },
+            {
+                "descricao": "fralda",
+                "quantidade": 10,
+                "data": "09/06/2021",
+                "valor": 8
+            },
+            {
+                "descricao": "Anador",
+                "quantidade": 1,
+                "data": "09/09/2022",
+                "valor": 4.50
+            },
+            {
+                "descricao": "epocler",
+                "quantidade": 6,
+                "data": "09/09/2019",
+                "valor": 26.92
+            }
+        ],
+        "divida": 146.92,
+        "aVer": [
+            {
+                "data": "10/06/2021",
+                "valor": 20.42
+            },
+            {
+                "valor": 27.00,
+                "data": "11/03/2021"
+            }
+        ]
+    },
+    {
+        "nome": "Priscila de Almeida Nóbrega",
+        "endereco": "Rua Goes Calmon, 38 - Matadouro",
+        "cpf": "78998774517",
+        "rg": "0929774211",
+        "email": "pri.nobrega@gmail.com",
+        "sexo": "feminino",
+        "items": [
+            {
+                "descricao": "shampoo clear woman",
+                "quantidade": 1,
+                "data": "09/09/2021",
+                "valor": 36.50
+            },
+            {
+                "descricao": "fralda",
+                "quantidade": 10,
+                "data": "09/06/2021",
+                "valor": 8.00
+            },
+            {
+                "descricao": "anitta",
+                "quantidade": 1,
+                "data": "09/09/2022",
+                "valor": 9.50
+            },
+            {
+                "descricao": "engov",
+                "quantidade": 6,
+                "data": "09/09/2019",
+                "valor": 20.92
+            }
+        ],
+        "divida": 146.92,
+        "aVer": [
+            {
+                "data": "10/06/2021",
+                "valor": 20.42
+            },
+            {
+                "data": "05/09/2021",
+                "valor": 28.00
+            }
+        ]
+    },
+    {
+        "nome": "Matheus Alves",
+        "endereco": "Rua Manuel Vitorino, 10 - Baitinga de cima",
+        "cpf": "01147898574",
+        "rg": "1929774213",
+        "email": "teteu.handsome@gmail.com",
+        "sexo": "masculino",
+        "items": [
+            {
+                "descricao": "sabonete protex",
+                "quantidade": 5,
+                "data": "09/09/2021",
+                "valor": 35.50
+            },
+            {
+                "descricao": "Tandrilax",
+                "quantidade": 1,
+                "data": "09/06/2021",
+                "valor": 6
+            },
+            {
+                "descricao": "Protetor Solar",
+                "quantidade": 1,
+                "data": "09/09/2022",
+                "valor": 71.20
+            },
+            {
+                "descricao": "epocler",
+                "quantidade": 6,
+                "data": "09/09/2019",
+                "valor": 26.92
+            }
+        ],
+        "divida": 146.92,
+        "aVer": [
+            {
+                "data": "10/06/2021",
+                "valor": 20.42
+            },
+            {
+                "valor": 29.00,
+                "data": "10/06/2021"
+            }
+        ]
+    }
+]

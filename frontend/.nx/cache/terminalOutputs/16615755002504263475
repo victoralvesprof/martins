@@ -1,0 +1,222 @@
+[36m⠋[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: sealing)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[33m29 10 2023 21:00:23.363:WARN [[karma-sabarivka-reporter]]: [39mNeither "coverage-istanbul" nor "coverage" reporter listed under karma "reporters" config section. No coverage report created
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m100[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'name' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m100[0m     component.name;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m101[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'endereco' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m101[0m     component.endereco;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m102[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'cpf' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m102[0m     component.cpf;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m103[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'rg' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m103[0m     component.rg;[39m[22m
+[1m[31m[7m   [0m [91m              ~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m104[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'email' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m104[0m     component.email;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m105[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'gender' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m105[0m     component.gender;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m113[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'isEditar' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m113[0m     expect(compon[39m[22m[1m[31ment.isEditar).toBeTruthy();[39m[22m
+[1m[31m[7m   [0m [91m                     ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m114[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'cliente' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m114[0m     expect(component.cliente).toEqual(MockClient);[39m[22m
+[1m[31m[7m   [0m [91m                     ~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m125[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'isEditar' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m125[0m       component.isEditar = true[39m[22m
+[1m[31m[7m   [0m [91m                ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m131[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'isEditar' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m131[0m       component.isEditar = false;[39m[22m
+[1m[31m[7m   [0m [91m                ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m132[0m:[93m56[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string' is not assignable to parameter of type 'never'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m132[0m       const spyConstructorNewClient = spyOn(component, 'constructorNewClient').and.returnValue(MockClient);[39m[22m
+[1m[31m[7m   [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m132[0m:[93m96[0m - [91merror[0m[90m TS2345: [0mArgument of type 'Cliente' is not assignable to parameter of type 'never'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m132[0m       const spyConstructorNewClient = spyOn(component, 'constructorNewClient').and.returnValue(MockClient);[39m[22m
+[1m[31m[7m   [0m [91m                                                                                               ~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[9[39m[22m[1m[31m6msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m142[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'cliente' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m142[0m     component.cliente = MockClient;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m144[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'constructorNewClient' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m144[0m     const callback = component.constructorNewClient();[39m[22m
+[1m[31m[7m   [0m [91m                               ~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/shared/services/cliente.service.spec.ts[0m:[93m61[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m61[0m     service.updateClient({} as Cliente).subscribe(res => {[39m[22m
+[1m[31m[7m  [0m [91m            ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96msrc/app/components/shared/services/cliente.service.ts[0m:[93m27[0m:[93m37[0m[39m[22m
+[1m[31m    [7m27[0m   updateClient(editClient: Cliente, id: string): Observable<any>{[39m[22m
+[1m[31m    [7m  [0m [96m                                    ~~~~~~~~~~[0m[39m[22m
+[1m[31m    An argument for 'id' was not provided.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[33m29 10 2023 21:00:26.701:WARN [karma]: [39mNo captured browser, open http://localhost:9876/
+[32m29 10 2023 21:00:27.151:INFO [karma-server]: [39mKarma v6.4.2 server started at http://localhost:9876/
+[32m29 10 2023 21:00:27.152:INFO [launcher]: [39mLaunching browsers Chrome with concurrency unlimited
+[32m29 10 2023 21:00:27.157:INFO [launcher]: [39mStarting browser Chrome
+[32m29 10 2023 21:01:07.715:INFO [Chrome 118.0.0.0 (Windows 10)]: [39mConnected on socket 0F5X4__MSDb1IV-EAAAB with id 53490371
+[33m29 10 2023 21:01:09.607:WARN [web-server]: [39m404: /_karma_webpack_/main.js
+Chrome 118.0.0.0 (Windows 10): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KChrome 118.0.0.0 (Windows 10): Executed 0 of 0[32m SUCCESS[39m (1.124 secs / 0 secs)
+[32mTOTAL: 0 SUCCESS[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: sealing)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m116[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'isEditar' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m116[0m       component.isEditar = true[39m[22m
+[1m[31m[7m   [0m [91m                ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m122[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'isEditar' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m122[0m       component.isEditar = false;[39m[22m
+[1m[31m[7m   [0m [91m                ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m123[0m:[93m56[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string' is not assignable to parameter of type 'never'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m123[0m       const spyConstructorNewClient = spyOn(component, 'constructorNewClient').and.returnValue(MockClient);[39m[22m
+[1m[31m[7m   [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m123[0m:[93m96[0m - [91merror[0m[90m TS2345: [0mArgument of type 'Cliente' is not assignable to parameter of type 'never'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m123[0m       const spyConstructorNewClient = spyOn(component, 'constructorNewClient').and.returnValue(MockClient);[39m[22m
+[1m[31m[7m   [0m [91m                                                                                               ~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m133[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'cliente' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m133[0m     component.cliente = MockClient;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m135[0m:[93m32[0m - [91merror[0m[39m[22m[1m[31m[90m TS2339: [0mProperty 'constructorNewClient' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m135[0m     const callback = component.constructorNewClient();[39m[22m
+[1m[31m[7m   [0m [91m                               ~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/shared/services/cliente.service.spec.ts[0m:[93m61[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m61[0m     service.updateClient({} as Cliente).subscribe(res => {[39m[22m
+[1m[31m[7m  [0m [91m            ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96msrc/app/components/shared/services/cliente.service.ts[0m:[93m27[0m:[93m37[0m[39m[22m
+[1m[31m    [7m27[0m   updateClient(editClient: Cliente, id: string): Observable<any>{[39m[22m
+[1m[31m    [7m  [0m [96m                                    ~~~~~~~~~~[0m[39m[22m
+[1m[31m    An argument for 'id' was not provided.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: sealing)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m120[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'isEditar' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m120[0m       component.isEditar = true[39m[22m
+[1m[31m[7m   [0m [91m                ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m126[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'isEditar' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m126[0m       component.isEditar = false;[39m[22m
+[1m[31m[7m   [0m [91m                ~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m127[0m:[93m56[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string' is not assignable to parameter of type 'never'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m127[0m       const spyConstructorNewClient = spyOn(component, 'constructorNewClient').and.returnValue(MockClient);[39m[22m
+[1m[31m[7m   [0m [91m                                                       ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m127[0m:[93m96[0m - [91merror[0m[90m TS2345: [0mArgument of type 'Cliente' is not assignable to parameter of type 'never'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m127[0m       const spyConstructorNewClient = spyOn(component, 'constructorNewClient').and.returnValue(MockClient);[39m[22m
+[1m[31m[7m   [0m [91m                                                                                               ~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m137[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'cliente' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m137[0m     component.cliente = MockClient;[39m[22m
+[1m[31m[7m   [0m [91m              ~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/cadastrar/cadastrar.component.spec.ts[0m:[93m139[0m:[93m32[0m - [91merror[0m[39m[22m[1m[31m[90m TS2339: [0mProperty 'constructorNewClient' does not exist on type 'CadastrarComponent'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m139[0m     const callback = component.constructorNewClient();[39m[22m
+[1m[31m[7m   [0m [91m                               ~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/shared/services/cliente.service.spec.ts[0m:[93m61[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m61[0m     service.updateClient({} as Cliente).subscribe(res => {[39m[22m
+[1m[31m[7m  [0m [91m            ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96msrc/app/components/shared/services/cliente.service.ts[0m:[93m27[0m:[93m37[0m[39m[22m
+[1m[31m    [7m27[0m   updateClient(editClient: Cliente, id: string): Observable<any>{[39m[22m
+[1m[31m    [7m  [0m [96m                                    ~~~~~~~~~~[0m[39m[22m
+[1m[31m    An argument for 'id' was not provided.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: sealing)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96msrc/app/components/shared/services/cliente.service.spec.ts[0m:[93m61[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m61[0m     service.updateClient({} as Cliente).subscribe(res => {[39m[22m
+[1m[31m[7m  [0m [91m            ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96msrc/app/components/shared/services/cliente.service.ts[0m:[93m27[0m:[93m37[0m[39m[22m
+[1m[31m    [7m27[0m   updateClient(editClient: Cliente, id: string): Observable<any>{[39m[22m
+[1m[31m    [7m  [0m [96m                                    ~~~~~~~~~~[0m[39m[22m
+[1m[31m    An argument for 'id' was not provided.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m

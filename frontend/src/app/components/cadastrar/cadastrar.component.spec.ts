@@ -96,22 +96,30 @@ describe('CadastrarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    component.name;
-    component.endereco;
-    component.cpf;
-    component.rg;
-    component.email;
-    component.gender;
-
+  it('should create the app', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should test ngOnInit', () => {
-    component.ngOnInit();
+  describe('should test ngOnInit', () => {
+    it('clientID true', () => {
+      const ngOninitSpy = spyOn(component, 'initializeForm').and.callFake(() => { });
+  
+      component.ngOnInit();
+  
+      expect(component.clientID).toBeTruthy();
+      expect(ngOninitSpy).toHaveBeenCalled();
+    });
 
-    expect(component.isEditar).toBeTruthy();
-    expect(component.cliente).toEqual(MockClient);
+    it('clientID false', () => {
+      spyOn(MockActivatedRoute.snapshot.paramMap, 'get').and.returnValue(undefined as any);
+      const ngOninitSpy = spyOn(component, 'initializeForm').and.callFake(() => { });
+  
+      component.ngOnInit();
+  
+      expect(component.clientID).toBeUndefined();
+      expect(ngOninitSpy).toHaveBeenCalled();
+    });
+
   });
 
   it('should test cancel', () => {
@@ -122,27 +130,17 @@ describe('CadastrarComponent', () => {
 
   describe('should test onSubmit', () => {
     it('if true', () => {
-      component.isEditar = true
+      component.clientID = 'true';
       component.onSubmit();
 
       expect(MockRouter.navigate).toHaveBeenCalledWith(['/consultar']);
     });
     it('else', () => {
-      component.isEditar = false;
-      const spyConstructorNewClient = spyOn(component, 'constructorNewClient').and.returnValue(MockClient);
+      component.clientID = undefined as any;
 
       component.onSubmit();
 
-      expect(spyConstructorNewClient).toHaveBeenCalled();
       expect(MockRouter.navigate).toHaveBeenCalledWith(['/consultar']);
     });
-  });
-
-  it('should test constructorNewClient', () => {
-    component.cliente = MockClient;
-
-    const callback = component.constructorNewClient();
-
-    expect(callback).toBeTruthy();
   });
 });

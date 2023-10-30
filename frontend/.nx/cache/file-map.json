@@ -1,0 +1,610 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.0.2",
+  "deps": {
+    "@angular/animations": "^15.2.9",
+    "@angular/cdk": "^15.2.9",
+    "@angular/common": "^15.2.9",
+    "@angular/compiler": "^15.2.9",
+    "@angular/core": "^15.2.9",
+    "@angular/forms": "^15.2.9",
+    "@angular/material": "^15.2.9",
+    "@angular/platform-browser": "^15.2.9",
+    "@angular/platform-browser-dynamic": "^15.2.9",
+    "@angular/router": "^15.2.9",
+    "@reactivex/rxjs": "^6.6.7",
+    "karma-sabarivka-reporter": "^3.3.1",
+    "ng2-currency-mask": "^13.0.3",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4",
+    "@angular-devkit/build-angular": "^15.2.9",
+    "@angular-devkit/core": "^15.2.9",
+    "@angular-devkit/schematics": "^15.2.9",
+    "@angular/cli": "^15.2.9",
+    "@angular/compiler-cli": "^15.2.9",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@nx/angular": "17.0.2",
+    "@nx/workspace": "17.0.2",
+    "@schematics/angular": "^15.2.9",
+    "@types/jasmine": "^4.3.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.0",
+    "jasmine-core": "^5.1.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "^2.1.0",
+    "nx": "17.0.2",
+    "typescript": "^4.9.5"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "martins": [
+        {
+          "file": ".editorconfig",
+          "hash": "6686520031028425313"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "13044518069027839699"
+        },
+        {
+          "file": ".husky/commit-msg",
+          "hash": "489951001300389996"
+        },
+        {
+          "file": ".husky/prepare-commit-msg",
+          "hash": "2698402699191744460"
+        },
+        {
+          "file": ".nx/cache/d/daemon.log",
+          "hash": "8784131796550906176"
+        },
+        {
+          "file": ".nx/cache/d/server-process.json",
+          "hash": "3238786026407643275"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "12343942279124280405"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "4815948323043747099"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "5336636969995539451"
+        },
+        {
+          "file": "README.md",
+          "hash": "8185042012345122691"
+        },
+        {
+          "file": "commitlint.config.ts",
+          "hash": "12925563670452597919",
+          "deps": [
+            "npm:@commitlint/types"
+          ]
+        },
+        {
+          "file": "karma.conf.js",
+          "hash": "13646223984275593133",
+          "deps": [
+            [
+              "npm:karma-jasmine",
+              "dynamic"
+            ],
+            [
+              "npm:karma-chrome-launcher",
+              "dynamic"
+            ],
+            [
+              "npm:karma-sabarivka-reporter",
+              "dynamic"
+            ],
+            [
+              "npm:karma-jasmine-html-reporter",
+              "dynamic"
+            ],
+            [
+              "npm:karma-coverage",
+              "dynamic"
+            ],
+            [
+              "npm:@angular-devkit/build-angular",
+              "dynamic"
+            ],
+            [
+              "npm:path",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "nx.json",
+          "hash": "17401343732137087807"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "13385127816896742012"
+        },
+        {
+          "file": "package.json",
+          "hash": "1376191968346440782",
+          "deps": [
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@reactivex/rxjs",
+            "npm:karma-sabarivka-reporter",
+            "npm:ng2-currency-mask",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular-devkit/core",
+            "npm:@angular-devkit/schematics",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@commitlint/cli",
+            "npm:@commitlint/config-conventional",
+            "npm:@nx/angular",
+            "npm:@nx/workspace",
+            "npm:@schematics/angular",
+            "npm:@types/jasmine",
+            "npm:cz-conventional-changelog",
+            "npm:husky",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:nx",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "project.json",
+          "hash": "14701991942543842526"
+        },
+        {
+          "file": "src/app/app-routing.module.ts",
+          "hash": "12120016337456900170",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "2076109361306440510"
+        },
+        {
+          "file": "src/app/app.component.scss",
+          "hash": "14172862418095115348"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "1295646098659108288",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "10171286503756234484",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "hash": "2575495889993094141",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.html",
+          "hash": "11075438754981308703"
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.scss",
+          "hash": "16979087158485933551"
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.spec.ts",
+          "hash": "13167120412633446378",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.ts",
+          "hash": "16534484647372532396",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.module.ts",
+          "hash": "18045064293295809225",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:ng2-currency-mask"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/estoque.service.spec.ts",
+          "hash": "6936659183451378675",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/estoque.service.ts",
+          "hash": "11231892743869704686",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.html",
+          "hash": "4035356942670963183"
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.scss",
+          "hash": "15991230553557289639"
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.spec.ts",
+          "hash": "15888697783009026174",
+          "deps": [
+            "npm:@angular/platform-browser",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/common",
+            "npm:rxjs",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.ts",
+          "hash": "16580119496889277125",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.module.ts",
+          "hash": "3386434012069219256",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.html",
+          "hash": "12421635802524063328"
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.scss",
+          "hash": "1390921134951091336"
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.spec.ts",
+          "hash": "11498253204182251309",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.ts",
+          "hash": "5985116904709785360",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/consultar/consultar.module.ts",
+          "hash": "15937975171264652516",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.html",
+          "hash": "16215091281004414584"
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.scss",
+          "hash": "931568636847774839"
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.spec.ts",
+          "hash": "9630387392454774211",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.ts",
+          "hash": "16599307735331785060",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/fiado.module.ts",
+          "hash": "13711324323204811982",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:ng2-currency-mask"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/pagar-fiado.dialog.html",
+          "hash": "1459408235053697448"
+        },
+        {
+          "file": "src/app/components/shared/interfaces/cliente.interface.ts",
+          "hash": "8596601675725925349"
+        },
+        {
+          "file": "src/app/components/shared/modules/material/material.module.ts",
+          "hash": "1485357635758208876",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/components/shared/services/cliente.service.spec.ts",
+          "hash": "10349448268449076452",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/shared/services/cliente.service.ts",
+          "hash": "4346129318492974795",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/mocks/data.mock.json",
+          "hash": "12425670166021283245"
+        },
+        {
+          "file": "src/environments/environment.prod.ts",
+          "hash": "13492303094249597219"
+        },
+        {
+          "file": "src/environments/environment.ts",
+          "hash": "1828003266015532232"
+        },
+        {
+          "file": "src/favicon.ico",
+          "hash": "3464744996580215640"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "10814003341087029017"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "14649673775804082431",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "src/polyfills.ts",
+          "hash": "2035846685621806592",
+          "deps": [
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "src/styles.scss",
+          "hash": "10284300294299230017"
+        },
+        {
+          "file": "src/test.ts",
+          "hash": "12412031923219697029",
+          "deps": [
+            "npm:zone.js",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "975288388445245975"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "2850247428870254560"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "17198424518534092990"
+        },
+        {
+          "file": ".nx/cache/lockfile.hash",
+          "hash": "900331016026880405"
+        },
+        {
+          "file": ".nx/cache/project-graph.json",
+          "hash": "2831195070630062920"
+        },
+        {
+          "file": ".nx/cache/parsed-lock-file.json",
+          "hash": "8205517659150941797"
+        },
+        {
+          "file": ".nx/cache/file-map.json",
+          "hash": "17043129998830054821"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/9596605766375988459",
+          "hash": "13340320208604723396"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/polyfills.1d26a3b7bb20f362.js",
+          "hash": "15252157590329924925"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/terminalOutput",
+          "hash": "13340320208604723396"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/runtime.906106ae6c88157e.js",
+          "hash": "17099732026036691447"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/styles.066bf9d28b050efc.css",
+          "hash": "16765396570400437056"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/code",
+          "hash": "1838281907459330133"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/favicon.ico",
+          "hash": "3464744996580215640"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/main.a703550541f679eb.js",
+          "hash": "13029204913107280728"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/3rdpartylicenses.txt",
+          "hash": "4972046883995355061"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/assets/mocks/data.mock.json",
+          "hash": "12425670166021283245"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/outputs/dist/martins/index.html",
+          "hash": "3439980432284433852"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459.commit",
+          "hash": "4664556114322093609"
+        },
+        {
+          "file": ".nx/cache/9596605766375988459/source",
+          "hash": "11873112038281250698"
+        },
+        {
+          "file": ".nx/cache/run.json",
+          "hash": "11322204904450586631"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/16615755002504263475",
+          "hash": "8996588909308227021"
+        },
+        {
+          "file": ".nx/cache/project-graph.json~cee9fffa",
+          "hash": "2831195070630062920"
+        },
+        {
+          "file": ".nx/cache/project-graph.json~1a83f13d",
+          "hash": "2831195070630062920"
+        },
+        {
+          "file": ".nx/cache/project-graph.json~db105f4a",
+          "hash": "2831195070630062920"
+        },
+        {
+          "file": ".nx/cache/project-graph.json~d46d4b51",
+          "hash": "2831195070630062920"
+        },
+        {
+          "file": ".nx/cache/project-graph.json~056f3d33",
+          "hash": "2831195070630062920"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/3668854250958428892",
+          "hash": "17750107951957975477"
+        },
+        {
+          "file": ".nx/cache/project-graph.json~995f968d",
+          "hash": "2831195070630062920"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/17990812722177109997",
+          "hash": "14213111551333266549"
+        }
+      ]
+    }
+  }
