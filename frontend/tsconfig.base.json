@@ -1,0 +1,18 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "lib": ["es2020", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "dynamic-form": ["src/app/modules/features/src/index.ts"],
+      "register": ["modules/feature/src/index.ts"]
+    }
+  }
+}

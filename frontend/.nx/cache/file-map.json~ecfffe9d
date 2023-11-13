@@ -1,0 +1,669 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.0.2",
+  "deps": {
+    "@angular/animations": "^15.2.9",
+    "@angular/cdk": "^15.2.9",
+    "@angular/common": "^15.2.9",
+    "@angular/compiler": "^15.2.9",
+    "@angular/core": "^15.2.9",
+    "@angular/forms": "^15.2.9",
+    "@angular/material": "^15.2.9",
+    "@angular/platform-browser": "^15.2.9",
+    "@angular/platform-browser-dynamic": "^15.2.9",
+    "@angular/router": "^15.2.9",
+    "@reactivex/rxjs": "^6.6.7",
+    "karma-sabarivka-reporter": "^3.3.1",
+    "ng2-currency-mask": "^13.0.3",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4",
+    "@angular-devkit/build-angular": "^15.2.9",
+    "@angular-devkit/core": "^15.2.9",
+    "@angular-devkit/schematics": "^15.2.9",
+    "@angular-eslint/eslint-plugin": "~15.0.0",
+    "@angular-eslint/eslint-plugin-template": "~15.0.0",
+    "@angular-eslint/template-parser": "~15.0.0",
+    "@angular/compiler-cli": "^15.2.9",
+    "@angular/language-service": "^15.2.9",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@nx/angular": "17.0.2",
+    "@nx/eslint": "17.0.2",
+    "@nx/eslint-plugin": "17.0.2",
+    "@nx/jest": "17.0.2",
+    "@nx/js": "17.0.2",
+    "@nx/workspace": "17.0.2",
+    "@schematics/angular": "^15.2.9",
+    "@swc-node/register": "~1.6.7",
+    "@swc/core": "~1.3.85",
+    "@types/jasmine": "^4.3.5",
+    "@types/jest": "^29.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "~8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.0",
+    "jasmine-core": "^5.1.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "~13.0.0",
+    "jsonc-eslint-parser": "^2.1.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "^2.1.0",
+    "nx": "17.0.2",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.5"
+  },
+  "pathMappings": {
+    "dynamic-form": [
+      "src/app/modules/features/src/index.ts"
+    ],
+    "register": [
+      "modules/feature/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "martins": [
+        {
+          "file": ".editorconfig",
+          "hash": "6686520031028425313"
+        },
+        {
+          "file": ".eslintignore",
+          "hash": "7663861978715868291"
+        },
+        {
+          "file": ".eslintrc.json",
+          "hash": "18315524891129148814"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "17090615579869685144"
+        },
+        {
+          "file": ".husky/commit-msg",
+          "hash": "489951001300389996"
+        },
+        {
+          "file": ".husky/prepare-commit-msg",
+          "hash": "2698402699191744460"
+        },
+        {
+          "file": ".nx/cache/d/daemon.log",
+          "hash": "14468513747857319791"
+        },
+        {
+          "file": ".nx/cache/d/server-process.json",
+          "hash": "9986641552823851241"
+        },
+        {
+          "file": ".nx/cache/file-map.json",
+          "hash": "13001981585076590984"
+        },
+        {
+          "file": ".nx/cache/lockfile.hash",
+          "hash": "12351565882357513621"
+        },
+        {
+          "file": ".nx/cache/parsed-lock-file.json",
+          "hash": "3524724190685645537"
+        },
+        {
+          "file": ".nx/cache/project-graph.json",
+          "hash": "14683984083528113822"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/11004319489044009735",
+          "hash": "4054702968334485109"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "3395189204293871444"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "16267754514737964994"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "15904881119927760751"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "4815948323043747099"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "5336636969995539451"
+        },
+        {
+          "file": "README.md",
+          "hash": "8185042012345122691"
+        },
+        {
+          "file": "commitlint.config.ts",
+          "hash": "12925563670452597919",
+          "deps": [
+            "npm:@commitlint/types"
+          ]
+        },
+        {
+          "file": "jest.config.ts",
+          "hash": "12333515226966617182",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "9430166341120122740",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "karma.conf.js",
+          "hash": "13646223984275593133",
+          "deps": [
+            [
+              "npm:path",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "nx.json",
+          "hash": "11234988683330891303"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "1173307950123224582"
+        },
+        {
+          "file": "package.json",
+          "hash": "7203988992260619655"
+        },
+        {
+          "file": "project.json",
+          "hash": "14701991942543842526"
+        },
+        {
+          "file": "src/app/app-routing.module.ts",
+          "hash": "13159527285380525016",
+          "deps": [
+            "dynamic-form"
+          ]
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "13424771918191590537"
+        },
+        {
+          "file": "src/app/app.component.scss",
+          "hash": "14172862418095115348"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "1295646098659108288",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "10171286503756234484",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "hash": "1407933818821100486",
+          "deps": [
+            "dynamic-form"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.html",
+          "hash": "11075438754981308703"
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.scss",
+          "hash": "16979087158485933551"
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.spec.ts",
+          "hash": "13167120412633446378",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.component.ts",
+          "hash": "16534484647372532396",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/adicionar-fiado.module.ts",
+          "hash": "18045064293295809225",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:ng2-currency-mask"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/estoque.service.spec.ts",
+          "hash": "6936659183451378675",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/adicionar-fiado/estoque.service.ts",
+          "hash": "11231892743869704686",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.html",
+          "hash": "4035356942670963183"
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.scss",
+          "hash": "15991230553557289639"
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.spec.ts",
+          "hash": "15888697783009026174",
+          "deps": [
+            "npm:@angular/platform-browser",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/common",
+            "npm:rxjs",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.component.ts",
+          "hash": "16580119496889277125",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/cadastrar/cadastrar.module.ts",
+          "hash": "3386434012069219256",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.html",
+          "hash": "12421635802524063328"
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.scss",
+          "hash": "1390921134951091336"
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.spec.ts",
+          "hash": "11498253204182251309",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/components/consultar/consultar.component.ts",
+          "hash": "5985116904709785360",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/consultar/consultar.module.ts",
+          "hash": "15937975171264652516",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.html",
+          "hash": "16215091281004414584"
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.scss",
+          "hash": "931568636847774839"
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.spec.ts",
+          "hash": "9630387392454774211",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/fiado.component.ts",
+          "hash": "16599307735331785060",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/fiado.module.ts",
+          "hash": "13711324323204811982",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:ng2-currency-mask"
+          ]
+        },
+        {
+          "file": "src/app/components/fiado/pagar-fiado.dialog.html",
+          "hash": "1459408235053697448"
+        },
+        {
+          "file": "src/app/components/shared/interfaces/cliente.interface.ts",
+          "hash": "8596601675725925349"
+        },
+        {
+          "file": "src/app/components/shared/interfaces/dynamic-control.interface.ts",
+          "hash": "17264618370354368087"
+        },
+        {
+          "file": "src/app/components/shared/models/dynamic-form-config.model.ts",
+          "hash": "5619834493351082401",
+          "deps": [
+            "npm:@angular/forms",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/components/shared/modules/material/material.module.ts",
+          "hash": "1485357635758208876",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/components/shared/services/cliente.service.spec.ts",
+          "hash": "10349448268449076452",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/components/shared/services/cliente.service.ts",
+          "hash": "4346129318492974795",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/mocks/data.mock.json",
+          "hash": "12425670166021283245"
+        },
+        {
+          "file": "src/environments/environment.prod.ts",
+          "hash": "13492303094249597219"
+        },
+        {
+          "file": "src/environments/environment.ts",
+          "hash": "1828003266015532232"
+        },
+        {
+          "file": "src/favicon.ico",
+          "hash": "3464744996580215640"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "10814003341087029017"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "14649673775804082431",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "src/polyfills.ts",
+          "hash": "2035846685621806592",
+          "deps": [
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "src/styles.scss",
+          "hash": "10284300294299230017"
+        },
+        {
+          "file": "src/test.ts",
+          "hash": "12412031923219697029",
+          "deps": [
+            "npm:zone.js",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "975288388445245975"
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "10667961010854116229"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "5715963158865355824"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "17198424518534092990"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/17923370187125602612",
+          "hash": "3244421341483603138"
+        }
+      ],
+      "dynamic-form": [
+        {
+          "file": "src/app/modules/features/.eslintrc.json",
+          "hash": "5295152673471534154"
+        },
+        {
+          "file": "src/app/modules/features/README.md",
+          "hash": "15178849453634529926"
+        },
+        {
+          "file": "src/app/modules/features/jest.config.ts",
+          "hash": "4059975350627498878"
+        },
+        {
+          "file": "src/app/modules/features/project.json",
+          "hash": "4131785923979523267"
+        },
+        {
+          "file": "src/app/modules/features/src/index.ts",
+          "hash": "4080483810591285773"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-field.directive.spec.ts",
+          "hash": "2139144822605923441"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-field.directive.ts",
+          "hash": "4477557604762682683",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-input/dynamic-form-input.component.html",
+          "hash": "17566908892281112034"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-input/dynamic-form-input.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-input/dynamic-form-input.component.spec.ts",
+          "hash": "14432837544051267858",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-input/dynamic-form-input.component.ts",
+          "hash": "8011036635876900970",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-radio/dynamic-form-radio.component.html",
+          "hash": "16170051524436718810"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-radio/dynamic-form-radio.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-radio/dynamic-form-radio.component.spec.ts",
+          "hash": "3293970597297301304",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form-radio/dynamic-form-radio.component.ts",
+          "hash": "8256692238040295514",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/lib/dynamic-form.module.ts",
+          "hash": "15400373508833934377",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/lib/register/register.component.html",
+          "hash": "1792217956266529436"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/register/register.component.scss",
+          "hash": "10279645405140121465"
+        },
+        {
+          "file": "src/app/modules/features/src/lib/register/register.component.spec.ts",
+          "hash": "14084549557193109207",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/lib/register/register.component.ts",
+          "hash": "14965662397223521748",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "src/app/modules/features/tsconfig.json",
+          "hash": "16248533471678702062"
+        },
+        {
+          "file": "src/app/modules/features/tsconfig.lib.json",
+          "hash": "8746075233993636049"
+        },
+        {
+          "file": "src/app/modules/features/tsconfig.spec.json",
+          "hash": "9840611283105717156"
+        }
+      ]
+    }
+  }
+}

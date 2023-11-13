@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <ng-container *ngFor="let field of config" [libDynamicField]="field">
+  </ng-container>
+  <div class="button-row">
+    <button type="button" mat-raised-button color="secundary" (click)="cancel()">
+        Cancelar
+    </button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">
+        Salvar
+    </button>
+</div>
+</form>

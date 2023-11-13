@@ -1,0 +1,13 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{ config.label }}</mat-label>
+  <input
+    matInput
+    [type]="config.type ?? ''"
+    [formControlName]="config.name"
+    [attr.placeholder]="config.placeholder"
+    [maxlength]="config.maxLength ?? ''"
+    [minlength]="config.minLength ?? ''"
+    [placeholder]="config.placeholder ?? ''"
+    [required]="config.required"
+  />
+</mat-form-field>

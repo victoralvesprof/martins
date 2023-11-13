@@ -9,6 +9,7 @@ import { CadastrarModule } from './components/cadastrar/cadastrar.module';
 import { ConsultarModule } from './components/consultar/consultar.module';
 import { FiadoModule } from './components/fiado/fiado.module';
 import { AdicionarFiadoModule } from './components/adicionar-fiado/adicionar-fiado.module';
+import { DynamicFormModule } from './modules/features/src/lib/dynamic-form.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AdicionarFiadoModule } from './components/adicionar-fiado/adicionar-fia
     CadastrarModule,
     ConsultarModule,
     FiadoModule,
-    AdicionarFiadoModule
+    AdicionarFiadoModule,
+    DynamicFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

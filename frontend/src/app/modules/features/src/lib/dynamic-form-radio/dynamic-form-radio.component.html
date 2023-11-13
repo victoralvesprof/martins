@@ -1,0 +1,11 @@
+<label [id]="config.id">{{ config.label }}</label>
+<mat-radio-group
+  [formControlName]="config.name"
+>
+  <mat-radio-button
+    *ngFor="let option of config.options"
+    [value]="option"
+  >
+    {{ option }}
+  </mat-radio-button>
+</mat-radio-group>

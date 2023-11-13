@@ -4,8 +4,13 @@ import { AdicionarFiadoComponent } from './components/adicionar-fiado/adicionar-
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { ConsultarComponent } from './components/consultar/consultar.component';
 import { FiadoComponent } from './components/fiado/fiado.component';
+import { RegisterComponent } from './modules/features/src/lib/register/register.component';
 
 const routes: Routes = [
+  {
+    path: 'registrar',
+    component: RegisterComponent
+  },
   {
     path: 'cadastrar',
     component: CadastrarComponent
@@ -28,7 +33,7 @@ const routes: Routes = [
   },
   { 
     path: '**', 
-    redirectTo: 'consultar' 
+    redirectTo: 'register' 
   },
   // {
   //   path: 'consultar',

@@ -1,0 +1,202 @@
+[36m⠋[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: emitting)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[33m13 11 2023 20:36:47.213:WARN [[karma-sabarivka-reporter]]: [39mNeither "coverage-istanbul" nor "coverage" reporter listed under karma "reporters" config section. No coverage report created
+[33m13 11 2023 20:36:48.378:WARN [karma]: [39mNo captured browser, open http://localhost:9876/
+[32m13 11 2023 20:36:49.287:INFO [karma-server]: [39mKarma v6.4.2 server started at http://localhost:9876/
+[32m13 11 2023 20:36:49.288:INFO [launcher]: [39mLaunching browsers Chrome with concurrency unlimited
+[32m13 11 2023 20:36:49.299:INFO [launcher]: [39mStarting browser Chrome
+[32m13 11 2023 20:37:17.511:INFO [Chrome 119.0.0.0 (Windows 10)]: [39mConnected on socket b_Uk0z-DO8ly6sszAAAB with id 88469888
+Chrome 119.0.0.0 (Windows 10): Executed 0 of 44[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 1 of 44[32m SUCCESS[39m (0 secs / 0.383 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 2 of 44[32m SUCCESS[39m (0 secs / 0.499 secs)
+[1A[2KLOG: [36m'ID para edição: ', ''[39m
+Chrome 119.0.0.0 (Windows 10): Executed 2 of 44[32m SUCCESS[39m (0 secs / 0.499 secs)
+LOG: 'ID para edição: ', ''
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 3 of 44[32m SUCCESS[39m (0 secs / 0.573 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 4 of 44[32m SUCCESS[39m (0 secs / 0.654 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 5 of 44[32m SUCCESS[39m (0 secs / 0.714 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 6 of 44[32m SUCCESS[39m (0 secs / 0.769 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 7 of 44[32m SUCCESS[39m (0 secs / 0.838 secs)
+[1A[2KLOG: [36m'entrouuuu'[39m
+Chrome 119.0.0.0 (Windows 10): Executed 7 of 44[32m SUCCESS[39m (0 secs / 0.838 secs)
+LOG: 'entrouuuu'
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 8 of 44[32m SUCCESS[39m (0 secs / 0.908 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 9 of 44[32m SUCCESS[39m (0 secs / 0.973 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 0, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 9 of 44[32m SUCCESS[39m (0 secs / 0.973 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 0, aVer: [], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 10 of 44[32m SUCCESS[39m (0 secs / 1.083 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 0, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 10 of 44[32m SUCCESS[39m (0 secs / 1.083 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 0, aVer: [], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 11 of 44[32m SUCCESS[39m (0 secs / 1.145 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 11 of 44[32m SUCCESS[39m (0 secs / 1.145 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 11 of 44[32m SUCCESS[39m (0 secs / 1.145 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 12 of 44[32m SUCCESS[39m (0 secs / 1.222 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 12 of 44[32m SUCCESS[39m (0 secs / 1.222 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 13 of 44[32m SUCCESS[39m (0 secs / 1.304 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 13 of 44[32m SUCCESS[39m (0 secs / 1.304 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 14 of 44[32m SUCCESS[39m (0 secs / 1.382 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 14 of 44[32m SUCCESS[39m (0 secs / 1.382 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 15 of 44[32m SUCCESS[39m (0 secs / 1.449 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 15 of 44[32m SUCCESS[39m (0 secs / 1.449 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 16 of 44[32m SUCCESS[39m (0 secs / 1.508 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 16 of 44[32m SUCCESS[39m (0 secs / 1.508 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KLOG: [36m'fiado editado: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 16 of 44[32m SUCCESS[39m (0 secs / 1.508 secs)
+LOG: 'fiado editado: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 17 of 44[32m SUCCESS[39m (0 secs / 1.564 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 17 of 44[32m SUCCESS[39m (0 secs / 1.564 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 18 of 44[32m SUCCESS[39m (0 secs / 1.614 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 18 of 44[32m SUCCESS[39m (0 secs / 1.614 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 19 of 44[32m SUCCESS[39m (0 secs / 1.68 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 19 of 44[32m SUCCESS[39m (0 secs / 1.68 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 20 of 44[32m SUCCESS[39m (0 secs / 1.745 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 20 of 44[32m SUCCESS[39m (0 secs / 1.745 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KLOG: [36m'abater test: ', 0[39m
+Chrome 119.0.0.0 (Windows 10): Executed 20 of 44[32m SUCCESS[39m (0 secs / 1.745 secs)
+LOG: 'abater test: ', 0
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 21 of 44[32m SUCCESS[39m (0 secs / 1.807 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 21 of 44[32m SUCCESS[39m (0 secs / 1.807 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}, Object{descricao: ..., quantidade: ..., data: ..., valor: ..., pago: ...}], divida: 50, aVer: [Object{valor: ...}, Object{valor: ...}, Object{valor: ...}], sobra: 0}
+[1A[2KLOG: [36m'abater test: ', 50[39m
+Chrome 119.0.0.0 (Windows 10): Executed 21 of 44[32m SUCCESS[39m (0 secs / 1.807 secs)
+LOG: 'abater test: ', 50
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 22 of 44[32m SUCCESS[39m (0 secs / 1.853 secs)
+[1A[2KLOG: [36m'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [], divida: 0, aVer: [], sobra: 0}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 22 of 44[32m SUCCESS[39m (0 secs / 1.853 secs)
+LOG: 'fiado cliente: ', Object{nome: '', endereco: '', cpf: '', rg: '', email: '', sexo: 0, items: [], divida: 0, aVer: [], sobra: 0}
+[1A[2KLOG: [36m'abater test: ', 10[39m
+Chrome 119.0.0.0 (Windows 10): Executed 22 of 44[32m SUCCESS[39m (0 secs / 1.853 secs)
+LOG: 'abater test: ', 10
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 23 of 44[32m SUCCESS[39m (0 secs / 1.908 secs)
+[1A[2KLOG: [36m'env', Object{production: false, bffClientes: 'http://localhost:5000/clientes/', bffProdutos: 'http://localhost:5001'}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 23 of 44[32m SUCCESS[39m (0 secs / 1.908 secs)
+LOG: 'env', Object{production: false, bffClientes: 'http://localhost:5000/clientes/', bffProdutos: 'http://localhost:5001'}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 24 of 44[32m SUCCESS[39m (0 secs / 1.917 secs)
+[1A[2KLOG: [36m'env', Object{production: false, bffClientes: 'http://localhost:5000/clientes/', bffProdutos: 'http://localhost:5001'}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 24 of 44[32m SUCCESS[39m (0 secs / 1.917 secs)
+LOG: 'env', Object{production: false, bffClientes: 'http://localhost:5000/clientes/', bffProdutos: 'http://localhost:5001'}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 25 of 44[32m SUCCESS[39m (0 secs / 1.923 secs)
+[1A[2KLOG: [36m'env', Object{production: false, bffClientes: 'http://localhost:5000/clientes/', bffProdutos: 'http://localhost:5001'}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 25 of 44[32m SUCCESS[39m (0 secs / 1.923 secs)
+LOG: 'env', Object{production: false, bffClientes: 'http://localhost:5000/clientes/', bffProdutos: 'http://localhost:5001'}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 26 of 44[32m SUCCESS[39m (0 secs / 1.932 secs)
+[1A[2KERROR: [36m'NG0304: 'lib-register' is not a known element (used in the 'AppComponent' component template):
+1. If 'lib-register' is an Angular component, then verify that it is a part of an @NgModule where this component is declared.
+2. If 'lib-register' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'[39m
+Chrome 119.0.0.0 (Windows 10): Executed 26 of 44[32m SUCCESS[39m (0 secs / 1.932 secs)
+ERROR: 'NG0304: 'lib-register' is not a known element (used in the 'AppComponent' component template):
+1. If 'lib-register' is an Angular component, then verify that it is a part of an @NgModule where this component is declared.
+2. If 'lib-register' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 27 of 44[32m SUCCESS[39m (0 secs / 1.94 secs)
+[1A[2KLOG: [36m'response getall: ', [][39m
+Chrome 119.0.0.0 (Windows 10): Executed 27 of 44[32m SUCCESS[39m (0 secs / 1.94 secs)
+LOG: 'response getall: ', []
+[1A[2KWARN: [36m'
+  It looks like you're using ngModel on the same form field as formControlName.
+  Support for using the ngModel input property and ngModelChange event with
+  reactive form directives has been deprecated in Angular v6 and will be removed
+  in a future version of Angular.
+
+  For more information on this, see our API docs here:
+  https://angular.io/api/forms/FormControlName#use-with-ngmodel
+  '[39m
+Chrome 119.0.0.0 (Windows 10): Executed 27 of 44[32m SUCCESS[39m (0 secs / 1.94 secs)
+WARN: '
+  It looks like you're using ngModel on the same form field as formControlName.
+  Support for using the ngModel input property and ngModelChange event with
+  reactive form directives has been deprecated in Angular v6 and will be removed
+  in a future version of Angular.
+
+  For more information on this, see our API docs here:
+  https://angular.io/api/forms/FormControlName#use-with-ngmodel
+  '
+[1A[2KLOG: [36m'Produto selecionado EVENT: ', ''[39m
+Chrome 119.0.0.0 (Windows 10): Executed 27 of 44[32m SUCCESS[39m (0 secs / 1.94 secs)
+LOG: 'Produto selecionado EVENT: ', ''
+[1A[2KLOG: [36m'Produto selecionado NGMODEL: ', Object{nome: '', quantidade: 1, validade: Mon Nov 13 2023 20:37:23 GMT-0300 (Horário Padrão de Brasília), preco: 0, imagem: '', descricao: '', lancamento: Wed Dec 31 1969 21:00:00 GMT-0300 (Horário Padrão de Brasília), compras: []}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 27 of 44[32m SUCCESS[39m (0 secs / 1.94 secs)
+LOG: 'Produto selecionado NGMODEL: ', Object{nome: '', quantidade: 1, validade: Mon Nov 13 2023 20:37:23 GMT-0300 (Horário Padrão de Brasília), preco: 0, imagem: '', descricao: '', lancamento: Wed Dec 31 1969 21:00:00 GMT-0300 (Horário Padrão de Brasília), compras: []}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 28 of 44[32m SUCCESS[39m (0 secs / 2.084 secs)
+[1A[2KLOG: [36m'response getall: ', [][39m
+Chrome 119.0.0.0 (Windows 10): Executed 28 of 44[32m SUCCESS[39m (0 secs / 2.084 secs)
+LOG: 'response getall: ', []
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 29 of 44[32m SUCCESS[39m (0 secs / 2.125 secs)
+[1A[2KLOG: [36m'response getall: ', [][39m
+Chrome 119.0.0.0 (Windows 10): Executed 29 of 44[32m SUCCESS[39m (0 secs / 2.125 secs)
+LOG: 'response getall: ', []
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 30 of 44[32m SUCCESS[39m (0 secs / 2.181 secs)
+[1A[2KLOG: [36m'response getall: ', [][39m
+Chrome 119.0.0.0 (Windows 10): Executed 30 of 44[32m SUCCESS[39m (0 secs / 2.181 secs)
+LOG: 'response getall: ', []
+[1A[2KLOG: [36m'response getall: ', [][39m
+Chrome 119.0.0.0 (Windows 10): Executed 30 of 44[32m SUCCESS[39m (0 secs / 2.181 secs)
+LOG: 'response getall: ', []
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 31 of 44[32m SUCCESS[39m (0 secs / 2.216 secs)
+[1A[2KLOG: [36m'response getall: ', [][39m
+Chrome 119.0.0.0 (Windows 10): Executed 31 of 44[32m SUCCESS[39m (0 secs / 2.216 secs)
+LOG: 'response getall: ', []
+[1A[2KLOG: [36m'response adicionar produto: ', Object{}[39m
+Chrome 119.0.0.0 (Windows 10): Executed 31 of 44[32m SUCCESS[39m (0 secs / 2.216 secs)
+LOG: 'response adicionar produto: ', Object{}
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 32 of 44[32m SUCCESS[39m (0 secs / 2.257 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 33 of 44[32m SUCCESS[39m (0 secs / 2.32 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 34 of 44[32m SUCCESS[39m (0 secs / 2.357 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 35 of 44[32m SUCCESS[39m (0 secs / 2.411 secs)
+[1A[2KLOG: [36m'RESPOSTA novo cliente: ', true[39m
+Chrome 119.0.0.0 (Windows 10): Executed 35 of 44[32m SUCCESS[39m (0 secs / 2.411 secs)
+LOG: 'RESPOSTA novo cliente: ', true
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 36 of 44[32m SUCCESS[39m (0 secs / 2.456 secs)
+[1A[2KLOG: [36m'RESPOSTA edicao cliente: ', true[39m
+Chrome 119.0.0.0 (Windows 10): Executed 36 of 44[32m SUCCESS[39m (0 secs / 2.456 secs)
+LOG: 'RESPOSTA edicao cliente: ', true
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 37 of 44[32m SUCCESS[39m (0 secs / 2.508 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 38 of 44[32m SUCCESS[39m (0 secs / 2.54 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 39 of 44[32m SUCCESS[39m (0 secs / 2.545 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 40 of 44[32m SUCCESS[39m (0 secs / 2.548 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 41 of 44[32m SUCCESS[39m (0 secs / 2.55 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 42 of 44[32m SUCCESS[39m (0 secs / 2.552 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 43 of 44[32m SUCCESS[39m (0 secs / 2.554 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 44 of 44[32m SUCCESS[39m (0 secs / 2.556 secs)
+[1A[2KChrome 119.0.0.0 (Windows 10): Executed 44 of 44[32m SUCCESS[39m (2.736 secs / 2.556 secs)
+[32mTOTAL: 44 SUCCESS[39m
+[1A[2K[31mChrome 119.0.0.0 (Windows 10) ERROR[39m
+  Some of your tests did a full page reload!
+Chrome 119.0.0.0 (Windows 10): Executed 44 of 44[32m SUCCESS[39m (2.736 secs / 2.556 secs)
+Chrome 119.0.0.0 (Windows 10) ERROR
+  Some of your tests did a full page reload!
+[33m13 11 2023 20:39:03.764:WARN [Chrome 119.0.0.0 (Windows 10)]: [39mDisconnected (0 times) Client disconnected from CONNECTED state (transport close)
+[1A[2K[31mChrome 119.0.0.0 (Windows 10) ERROR[39m
+  Disconnected Client disconnected from CONNECTED state (transport close)
+Chrome 119.0.0.0 (Windows 10): Executed 44 of 44[32m SUCCESS[39m (2.736 secs / 2.556 secs)
+Chrome 119.0.0.0 (Windows 10) ERROR
+  Disconnected Client disconnected from CONNECTED state (transport close)
+[91m13 11 2023 20:39:04.628:ERROR [launcher]: [39mChrome crashed.
+	
+[91m13 11 2023 20:39:04.630:ERROR [launcher]: [39mChrome stdout: 
+[91m13 11 2023 20:39:04.638:ERROR [launcher]: [39mChrome stderr: 
+[32m13 11 2023 20:39:04.833:INFO [launcher]: [39mTrying to start Chrome again (1/2).
+[32m13 11 2023 20:39:08.229:INFO [Chrome 119.0.0.0 (Windows 10)]: [39mConnected on socket -oDMirJtrIXgSfLQAAAD with id 88469888
